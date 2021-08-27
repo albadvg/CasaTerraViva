@@ -125,9 +125,7 @@ h4{
 }
 
 .marron{
-    /* background-color: rgb(84, 66, 57); */
-    /* background-color: rgb(86, 75, 64); */
-    background-color: rgb(57, 43, 28);
+    background-color: rgb(132, 99, 51);
 }
 
 /*color letra*/
@@ -876,15 +874,6 @@ details summary::before {
 
 
 /******/
-
-#carousel-cursos img{
-    height: 250px;
-    width: auto;
-}
-
-#carousel-cursos .owl-item{
-    width: auto !important;
-}
 
 
 #carousel-cursos .owl-prev{
