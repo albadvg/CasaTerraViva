@@ -897,6 +897,11 @@ details[open] summary::before {
         margin-top: 35px;
     }
 }
+@media screen and (max-width: 560px){
+    .cursos summary h3{
+        font-size: 1.3rem;
+    }
+}
 
 
 /******/
@@ -1004,7 +1009,8 @@ details[open] summary::before {
         margin-bottom: 20px;
     }
     .actividade{
-        flex: 0 0 99%
+        flex: 0 0 99%;
+        margin-bottom: 20px;
     }
     .carousel-entorno{
         width: 80vw;
