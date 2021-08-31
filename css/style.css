@@ -125,7 +125,7 @@ h4{
 }
 
 .marron{
-    background-color: rgb(132, 99, 51);
+    background-color: rgb(70, 49, 18);
 }
 
 /*color letra*/
@@ -203,7 +203,7 @@ header{
 }
 @media screen and (max-width:360px){
     .cabeceira a{
-        font-size: 2.8rem;
+        font-size: 2.3rem;
     }
 }
 nav{
@@ -654,7 +654,7 @@ footer #contacto p{
 
 /*****/
 .casa-hoy{
-    padding: 50px;
+    padding: 50px 0 50px 0;
     margin-top: -10px;
     align-items: center;
 }
@@ -672,10 +672,10 @@ footer #contacto p{
         flex-wrap: nowrap;
     }
     .alojamiento .sub-header p{
-        width: 70vw;
+        width: 80vw;
     }
     .casa-hoy p{
-        width: 70vw;
+        width: 80vw;
 
     }
 
@@ -700,8 +700,8 @@ footer #contacto p{
     flex: 0 0 32%;
 }
 
-.texto-tarxeta{
-    padding-bottom: 2vw;
+.texto-tarxeta h4{
+    margin: 0 0 2vw 0;
 }
 .carousel-estancias{
     width: 25vw;
@@ -718,31 +718,6 @@ footer #contacto p{
     height: 40px;
     width: 40px;
 }
-
-@media all and (max-width:1200px){
-    .tarxeta{
-        flex: 0 0 49%;
-    }
-    .carousel-estancias{
-        width: 40vw;
-    }  
-}
-@media all and (max-width:769px){
-    .tarxeta{
-        flex: 0 0 99%
-    }
-    .texto-tarxeta{
-        margin: 0 auto;
-    }
-    .carousel-estancias{
-        width: 80vw;
-    }
-    .carousel-estancias .owl-prev , .carousel-estancias .owl-next{
-        top: 40%;
-    }
-}
-
-
 .carousel-estancias .owl-prev:hover , .carousel-estancias .owl-next:hover{
     cursor: pointer;
 }
@@ -756,11 +731,49 @@ footer #contacto p{
     background: rgba(255, 255, 255, 0.699);
 }
 
-/* .carousel-estancias .owl-dots{
-    position: absolute;
-    top: 90%;
-    left: 40%;
-} */
+@media all and (max-width:1200px){
+    .tarxeta{
+        flex: 0 0 49%;
+    }
+    .carousel-estancias{
+        width: 40vw;
+    }  
+    .texto-tarxeta h4{
+        margin: 0 0 2vw 1vw;
+    }
+}
+@media all and (max-width:769px){
+    .tarxeta{
+        flex: 0 0 99%
+    }
+    .texto-tarxeta{
+        margin: 0 auto;
+    }
+
+    .carousel-estancias{
+        width: 80vw;
+    }
+    .carousel-estancias .owl-prev , .carousel-estancias .owl-next{
+        top: 40%;
+    }
+    .texto-tarxeta h4{
+        margin: 0 0 3vw 5vw;
+    }
+}
+@media all and (max-width:560px){
+    .tarxeta:nth-child(2),
+    .tarxeta:nth-child(5),
+    .tarxeta:nth-child(7),
+    .tarxeta:nth-child(8){
+        margin-bottom: 35px;
+    }
+}
+@media all and (max-width:360px){
+    
+    .texto-tarxeta h4{
+        margin: 0 0 6vw 6vw;
+    }
+}
 
 
 /*********/
@@ -781,96 +794,109 @@ footer #contacto p{
     font-weight: 500;
 }
 
-
 /*CURSOS*/
 
-.cursos main{
-    min-height: 90vh;
-}
-
-.texto-viños-intro{
-    padding: 60px;
-}
-@media screen and (max-width: 560px){
-    .texto-viños-intro{
-        padding:30px 0 30px 0;
-    }
-}
-.texto-viños-intro ul{
-    background: rgba(74, 52, 16, 0.07);
+.texto-cursos{
+    margin: 50px 0 60px 0;
+    flex-direction: column;
     text-align: left;
-    margin: 20px;
-    padding: 20px 20px 20px 40px;
-    list-style: none;
-
 }
 
-.texto-viños-intro ul li::before {
+.texto-cursos>*{
+    width: 780px;
+}
+
+.texto-cursos #obxetivos{
+    padding: 30px 0 30px 0;
+    list-style: none;
+}
+
+.texto-cursos #obxetivos li::before {
     content: "\2022"; 
     color: rgb(86, 75, 64);
     font-weight: bold; 
     font-size: 1.2rem;
     display: inline-block;
-    width: 2em; 
-    margin-left: -1em; 
+    width: 1.2em; 
 }
 
 .cursos details{
-    width: 800px;
     margin-top: 20px;
-    /* box-shadow: 2px 2px 10px rgba(184, 184, 184, 0.571); */
-    border-radius: 10px 10px;
-}
-
-.cursos details div{
-
-    border-right:  solid 4px rgb(227, 250, 142);
-    border-bottom:  solid 4px rgb(227, 250, 142);
-    border-left:  solid 4px rgb(227, 250, 142);
-    border-radius: 0 0 10px 10px;
-    padding: 20px;
-    justify-content: center;
-
-}
-
-
-.cursos details div li{
-    margin-bottom: 5px;
-    list-style-type: upper-roman;
-    text-align: left;
-}
-
-.cursos details div li::marker{
-    font-weight: 600;
-    color:rgb(86, 75, 64);
 }
 
 .cursos summary{
     cursor: pointer;
     background-color: rgb(227, 250, 142);
-    padding: 5px;   
+    padding: 7px;   
     position: relative;
+    text-align: center;
+    border-radius: 3px;
 }
-
+details summary::before { 
+    content: url(../img/plus.svg);
+    width: 1.5rem;
+    position: absolute;
+    top: 28%;
+    left: 13px;
+}
+details[open] summary::before { 
+    content:url(../img/dash.svg); 
+}  
 .cursos summary>*{
     display: inline;
 }
+ 
+.cursos details>div{
+    padding: 20px 0;
+    justify-content: space-between;
+}
 
+.cursos details #programa span, .cursos details #fechas span{
+    display: block;
+    background-color:rgba(227, 250, 142, 0.687) ;
+    padding: 7px 0 3px 30px;
+}
 
-details summary::before { 
-    content: url(../img/plus.svg);
-    display: inline-block; 
-    margin-right: 20px;
-    width: 3rem;
-    position: absolute;
-    top: 28%;
-    left: 10px;
-  }
-  
-  details[open] summary::before { 
-    content:url(../img/dash.svg); 
-    margin-right: 20px;
-  }  
+.cursos details #programa ol, .cursos details #fechas ul{
+    border: solid 4px rgba(227, 250, 142, 0.687);
+    padding: 15px;
+    border-radius: 3px;
+}
+
+.cursos details #programa ol li{
+    margin-bottom: 5px;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    text-align: left;
+}
+.texto-cursos #fechas ul{
+    list-style: square;
+}
+.cursos details #fechas ul li{
+    margin-bottom: 5px;
+    list-style-position: inside;
+}
+
+.cursos details div li::marker{
+    font-weight: 600;
+    color:rgb(86, 75, 64);
+    margin-right: 1.2rem;
+}
+@media screen and (max-width: 900px){
+    .texto-cursos{
+        margin: 40px 0 40px 0; ;
+    }
+    .texto-cursos>*{
+        width: 85vw;
+    }
+    .cursos details>div{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .cursos details{
+        margin-top: 35px;
+    }
+}
 
 
 /******/
@@ -934,13 +960,14 @@ details summary::before {
 
 .actividade h3{
     font-weight: 600;
-    margin: 8px;
+    margin: 8px 0 20px 0;
 }
 .actividade:last-child>h3{
     margin-top: 45px;
 }
 .actividade p{
     margin-bottom: 10px;
+
 }
 
 .actividade a{
@@ -973,6 +1000,9 @@ details summary::before {
     }  
 }
 @media all and (max-width:769px){
+    .actividades{
+        margin-bottom: 20px;
+    }
     .actividade{
         flex: 0 0 99%
     }
@@ -981,6 +1011,10 @@ details summary::before {
     }
     .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
         top: 40%;
+    }
+    .actividade p{
+        width: 80vw;
+        margin: 0 auto;
     }
 }
 /****/
@@ -1099,14 +1133,18 @@ details summary::before {
         align-items: center;
     }
     .sobre-mi img{
-        width: 60vw;
+    
         margin-top: 30px;
     }
     .contenedor-sobre-mi p{
         width: 80vw;
         margin: 40px 0 40px 0;
     }
-
+    @media screen and (max-width:560px){
+        .sobre-mi img{
+            width: 80vw;
+        }
+    }
 }
 /*RESERVAS*/
 
