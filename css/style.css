@@ -148,24 +148,24 @@ header{
         padding: 100px 0 40px 0;
     }
 }
-.cabeceira a{
+.cabeceira h1{
     font-family: 'Fredericka the Great', cursive;    
     font-size: 5rem;
     color: rgb(255, 255, 255);
     text-align: center;   
 }
 @media screen and (max-width:900px){
-    .cabeceira a{
+    .cabeceira h1{
         font-size: 4rem;
     }
 } 
 @media screen and (max-width:560px){
-    .cabeceira a{
+    .cabeceira h1{
         font-size: 3rem;
     }
 }
 @media screen and (max-width:360px){
-    .cabeceira a{
+    .cabeceira h1{
         font-size: 2.3rem;
     }
 }
