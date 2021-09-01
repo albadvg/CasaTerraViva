@@ -1,35 +1,12 @@
-/*Montserrat 100, 200, 300, 400, 500, 600, 800, it100*/
+/*FONTES*/
+
+/*Montserrat 100, 200, 300, 400, 500, 600, 800*/
 /*Roboto Slab 300,400, 500, 600, 800*/
-/*EB Garamond 400, 600, it400, it600*/
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,600&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100&family=Roboto+Slab:wght@300;400;500;600;800&display=swap');
-/*Homemade Apple*/
-/*Sanchez*/
-@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Sanchez&display=swap');
-/*'Chelsea Market', cursive*/
-/*font-family: 'Fredericka the Great', cursive;
-font-family: 'Montserrat Subrayada', sans-serif;
-font-family: 'Playfair Display', serif; 400,500,600,800
-font-family: 'Prata', serif;*/
-@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Fredericka+the+Great&family=Montserrat+Subrayada&family=Playfair+Display:wght@400;500;600;800&family=Prata&display=swap');
-/*font-family: tangerine, sans-serif;*/
-@import url("https://use.typekit.net/xzv5lbh.css");
-@font-face{
-    font-family: "Quentin_2";
-    src: url(../fonts/quentin_2/Quentin.otf);
-}
-
-@font-face{
-    font-family:'AmenityKits';
-    src: url(../fonts/a_amenity_kits/aAmenityKits.otf);
-}
-
-@font-face {
-    font-family: "BandaraSignature";
-    src: url(../fonts/bandara_signature/BandaraSignature.ttf);
-}
-
+/*font-family: 'Fredericka the Great', cursive;*/
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:wght@100;200;300;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&display=swap');
 /*************************/
 
+/*ESTILOS BASE*/
 *{
     margin: 0;
     box-sizing: border-box;
@@ -37,8 +14,7 @@ font-family: 'Prata', serif;*/
     font-size: 15px;
     font-weight: 400;
     line-height: 1.5rem;
-    text-decoration: none;
-    
+    text-decoration: none;   
 }
 
 body{
@@ -52,42 +28,33 @@ summary::-webkit-details-marker {
     display: none; 
 }
 
-
-
+/*encabezados*/
 h1, h2, h3, h4, h5{
     font-family: 'Roboto Slab';
     color: rgb(86, 75, 64);
 }
-
 h1{
     font-size: 3rem;
 }
-
 h2{
     font-size: 2rem;
     letter-spacing: 1.2pt;
     font-weight: 800;
 }
-
-
 h3{
     font-size: 1.5rem;
 }
-
 h4{
     font-size: 1.2rem;
-    /* font-family: 'Montserrat'; */
-    /* font-family: 'Roboto Slab'; */
-    /* font-family: 'Homemade Apple'; */
-    /* font-family: 'Sanchez'; */
-}
 
+}
 @media all and (max-width:769px){
     h2{
         font-size: 1.5rem;
     }
 }
-/*ESTILOS XERAIS*/
+
+/*CLASES BÁSICAS*/
 
 .contenedor-flex{
     display: flex;
@@ -96,34 +63,27 @@ h4{
 .flex-column{
     flex-direction: column;
 }
-
 .bold{
     font-weight: 600;
 }
-
 .franxa-imaxe img{
     display: block;
 }
 
-/*color fondo*/
+/*colores fondo*/
 
 .verde1{
     background-color: rgb(174, 203, 94);
-    /* rgb(142, 177, 81); */
 }
-
 .verde2{
     background-color: rgb(217, 249, 161);
 }
-
 .verde3{
     background-color: rgb(56, 90, 37);
 }
-
 .amarelo{
     background-color: rgb(235, 235, 133);
 }
-
 .marron{
     background-color: rgb(70, 49, 18);
 }
@@ -138,26 +98,35 @@ h4{
     color: rgb(86, 75, 64);
 }
 
+/*franxa xenérica*/
+.franxa{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 /*lazy load*/
+
 img.lazy {
     opacity: .1;
-  }
-  img:not(.initial) {
+}
+img:not(.initial) {
     transition: opacity 1s;
-  }
-  img.initial,
-  img.loaded,
-  img.error,
-  img.entered {
+}
+img.initial,
+img.loaded,
+img.error,
+img.entered {
     opacity: 1;
-  }
+}
 
-  img:not([src]) {
+img:not([src]) {
     visibility: hidden;
-  }
+}
 
 
-/*navegación*/
+/*NAVEGACIÓN*/
 
 header{
     width: 100%;
@@ -166,31 +135,25 @@ header{
     justify-content: space-around;
     align-items: center;
 }
-
 .cabeceira{
     padding: 130px 0 40px 0;
 }
-
 @media screen and (max-width:900px){
     .cabeceira {
         padding: 110px 0 40px 0;
     }
 } 
-
-
 @media screen and (max-width:480px){
     .cabeceira {
         padding: 100px 0 40px 0;
     }
 }
-
 .cabeceira a{
     font-family: 'Fredericka the Great', cursive;    
     font-size: 5rem;
     color: rgb(255, 255, 255);
     text-align: center;   
 }
-
 @media screen and (max-width:900px){
     .cabeceira a{
         font-size: 4rem;
@@ -211,20 +174,16 @@ nav{
     margin: 0 auto;
     padding: 0 0 15px 0;
 }
-
 nav ul{
     justify-content: space-around;
     align-items: center;
     padding: 0 ;
 }
-
 nav li{
     list-style: none;
     margin-top: 5px;
 }
-
 nav li  a{   
-    /* color: rgb(49, 49, 49); */
     color: rgb(73, 66, 58);
     padding: 8px;
     font-size: .95rem;
@@ -234,43 +193,34 @@ nav li  a{
         font-size: .85rem;
     }
 }
-
 nav .barra-vertical-menu{
     font-size:2rem ;
     font-weight: 200;
-    /* color: rgb(255, 255, 255); */
     color: rgb(86, 75, 64);
 }
-
 @media screen and (max-width:480px){
     nav .barra-vertical-menu{
         font-size: 1.4rem;
     }
 }
-
-
 nav .menu-seleccionado{
     color: white;
 }
-
 nav a:hover{
     color: white;
 }
 
-
-/***footer***/
+/***FOOTER***/
 
 .contido-footer{
     width: 100%;  
     padding: 2rem;
 }
-
 .contido-footer>div{
     flex: 0 0 25%;
     height: 180px;
     padding-left: 20px;
 }
-
 footer #localizacion, footer #contacto, #menu-footer{
     border-left: 1px solid white;
     font-size: .8rem;
@@ -278,7 +228,6 @@ footer #localizacion, footer #contacto, #menu-footer{
 .contido-footer #contacto{
     flex-direction: column;
 }
-
 footer h5{
     font-family: 'Fredericka the Great', cursive;
     color: white;
@@ -290,25 +239,20 @@ footer h5{
 .contido-footer p{
     color: white
 }
-
 footer i{
     margin-right: 15px;
 }
-
 footer #contacto p{
     padding: .4rem;
 }
-
 #menu-footer ul{
     padding-left:1rem;
     flex-flow: column;
 }
-
 #menu-footer li{
     list-style: none;
     margin-bottom: .3rem;
 }
-
 #menu-footer a{
     font-size: .8rem;
 }
@@ -371,7 +315,6 @@ footer #contacto p{
     }
 }
 
-
 .credito-deseño{
     color: white;
     background-color: rgb(33, 28, 25);
@@ -387,44 +330,24 @@ footer #contacto p{
     color: rgb(211, 204, 186);
 }
 
-/*tira imaxes*/
-.tira-imaxes img{
-    width: auto;
-}
-
-.tira-imaxes{
-    justify-content: space-around;
-}
-
-/*franxas*/
-.franxa{
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/********************INICIO************************/
+/**********INICIO***********************************************************/
 
 .hero{
     width: 100%;
 }
-
 .hero img{
     vertical-align: middle;
 }
 
-/**/
+/*sub-header*/
 
 .sub-header{
     width: 100%;
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 50px;
-    
+    padding: 50px;   
 }
-
 .inicio .sub-header div{
     flex-direction: column;
     align-items: center;
@@ -434,26 +357,19 @@ footer #contacto p{
     font-weight: 400;
     line-height: 1.8rem;
 }
-
 .inicio .sub-header h2{
-    line-height: 2rem;
-    
+    line-height: 2rem;   
 }
-
-
 @media all and (max-width:900px){
     .inicio .sub-header div{
         width: 70vw;
     }
 }
-
-
 @media all and (max-width:769px){
     .inicio .sub-header h2{
         width: 50vw;
     }
 }
-
 @media all and (max-width:480px){
     .inicio .sub-header div{
         width: 70vw;
@@ -463,52 +379,41 @@ footer #contacto p{
     }
 }
 
-/***/
+/*apartados*/
 
 .apartados-inicio{ 
     flex-direction: column;
     align-items: center;
 }
-
 .apartado-inicio{
     align-items: center;
     margin: 50px 0px 10px 0px;
     gap: 70px;
 }
-
 .texto-apartado{
     width: 25vw;
 }
-
 .texto-apartado h2{
     margin-bottom: 30px;
 }
-
 #entorno{
     text-align: right;
 }
-
 #cursos{
     margin-bottom: 70px;
 }
-
 #alojamiento img{
     width: 20vw;
 }
-
 #entorno img{
     width: 20vw;
 }
-
 #cursos img{
     width:25vw ;
-
 }
-
 .ver-mas{
     margin-top: 20px;
 }
-
 .ver-mas a{
     font-weight: 600;
     color:rgb(86, 75, 64);
@@ -522,7 +427,6 @@ footer #contacto p{
     
     }
 }
-
 @media all and (max-width:900px){
     #alojamiento img , #entorno img{
         width: 30vw;
@@ -535,14 +439,12 @@ footer #contacto p{
         width: 40vw;
     }
 }
-
 @media all and (max-width:769px){
     .ver-mas a{
         font-size: .9rem;
     }
     
 }
-
 @media all and (max-width:540px){
     .apartado-inicio{
         flex-direction: column;
@@ -566,67 +468,53 @@ footer #contacto p{
     }
 }
 
-
-/****/
+/*franxa reservas*/
 #reservas #chaves{
     width: 70px;
 }
-
 #reservas .texto{
     width: 500px;
     color: rgb(61, 60, 60);
     padding: 20px 0 30px 0;
 }
-
 #reservas .texto .contenedor-flex{
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 #reservas .texto p{
     line-height: 30px;
     font-weight: 500;
 }
-
 #reservas a{
-    color: white;
-    
+    color: white;   
 }
-
 #reservas .texto h2{
     padding: 10px 0 20px 0px;
 }
 
-
-/*******************ALOJAMIENTO*******************/
+/*******ALOJAMIENTO****************************************************************/
 
 .alojamiento .sub-header{
     flex-direction: column;
 }
-
 .alojamiento .sub-header p{
     width: 60vw;
     margin-bottom: 1.5rem;
 }
-
 .alojamiento .sub-header h2{
     margin-bottom: 20px;
     align-self: flex-start;
 }
 
-/***/
-
+/*carousel rehabilitación*/
 
 #carousel-rehab .owl-prev{
     left: 0px
 }
-
 #carousel-rehab .owl-next{
     right: 0px;
 }
-
-
 #carousel-rehab .owl-prev , #carousel-rehab .owl-next{
     position: absolute;
     top: 100px;
@@ -637,13 +525,10 @@ footer #contacto p{
 #carousel-rehab .owl-prev:hover , #carousel-rehab .owl-next:hover{
     cursor: pointer;
 }
-
 #carousel-rehab .owl-prev span , #carousel-rehab .owl-next span{
     font-size: 80px;
     color: rgba(255, 255, 255, 0.788);
-
 }
-
 #carousel-rehab .owl-theme .owl-nav [class*="owl-"]:hover{
     background: rgba(255, 255, 255, 0.699);
 }
@@ -653,6 +538,7 @@ footer #contacto p{
 }
 
 /*****/
+
 .casa-hoy{
     padding: 50px 0 50px 0;
     margin-top: -10px;
@@ -678,28 +564,24 @@ footer #contacto p{
         width: 80vw;
 
     }
-
 }
-
 @media all and (max-width:480px){
     .alojamiento .sub-header p{
         width: 80vw;
     }
 }
 
-/*****/
+/*tarxetas alojamiento*/
 
 .tarxetas{
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-around;
 }
-
 .tarxeta{
     padding: 3vw;
     flex: 0 0 32%;
 }
-
 .texto-tarxeta h4{
     margin: 0 0 2vw 0;
 }
@@ -730,7 +612,6 @@ footer #contacto p{
 .carousel-estancias .owl-theme .owl-nav [class*="owl-"]:hover{
     background: rgba(255, 255, 255, 0.699);
 }
-
 @media all and (max-width:1200px){
     .tarxeta{
         flex: 0 0 49%;
@@ -775,8 +656,7 @@ footer #contacto p{
     }
 }
 
-
-/*********/
+/*franxa tarifas alojamiento*/
 
 .contido-tarifas{
     height: 200px;
@@ -786,7 +666,6 @@ footer #contacto p{
     padding: 40px;
     font-weight: 500;
 }
-
 .contido-tarifas h3{
     font-weight: 600;
 }
@@ -794,23 +673,20 @@ footer #contacto p{
     font-weight: 500;
 }
 
-/*CURSOS*/
+/*******CURSOS***********************************************************************/
 
 .texto-cursos{
     margin: 50px 0 60px 0;
     flex-direction: column;
     text-align: left;
 }
-
 .texto-cursos>*{
     width: 780px;
 }
-
 .texto-cursos #obxetivos{
     padding: 30px 0 30px 0;
     list-style: none;
 }
-
 .texto-cursos #obxetivos li::before {
     content: "\2022"; 
     color: rgb(86, 75, 64);
@@ -819,11 +695,9 @@ footer #contacto p{
     display: inline-block;
     width: 1.2em; 
 }
-
 .cursos details{
     margin-top: 20px;
 }
-
 .cursos summary{
     cursor: pointer;
     background-color: rgb(227, 250, 142);
@@ -845,24 +719,20 @@ details[open] summary::before {
 .cursos summary>*{
     display: inline;
 }
- 
 .cursos details>div{
     padding: 20px 0;
     justify-content: space-between;
 }
-
 .cursos details #programa span, .cursos details #fechas span{
     display: block;
     background-color:rgba(227, 250, 142, 0.687) ;
     padding: 7px 0 3px 30px;
 }
-
 .cursos details #programa ol, .cursos details #fechas ul{
     border: solid 4px rgba(227, 250, 142, 0.687);
     padding: 15px;
     border-radius: 3px;
 }
-
 .cursos details #programa ol li{
     margin-bottom: 5px;
     list-style-type: upper-roman;
@@ -876,7 +746,6 @@ details[open] summary::before {
     margin-bottom: 5px;
     list-style-position: inside;
 }
-
 .cursos details div li::marker{
     font-weight: 600;
     color:rgb(86, 75, 64);
@@ -903,66 +772,53 @@ details[open] summary::before {
     }
 }
 
-
-/******/
+/*carousel fotos cata*/
 
 
 #carousel-cursos .owl-prev{
     left: 0px
 }
-
 #carousel-cursos .owl-next{
     right: 0px;
 }
-
-
 #carousel-cursos .owl-prev , #carousel-cursos .owl-next{
     position: absolute;
     top: 100px;
     height: 40px;
     width: 40px;
-
 }
 #carousel-cursos .owl-prev:hover , #carousel-cursos .owl-next:hover{
     cursor: pointer;
 }
-
 #carousel-cursos .owl-prev span , #carousel-cursos .owl-next span{
     font-size: 80px;
     color: rgba(255, 255, 255, 0.788);
-
 }
-
 #carousel-cursos .owl-theme .owl-nav{
     margin-top: 0 !important;
 }
-
 #carousel-cursos .owl-theme .owl-nav [class*="owl-"]:hover{
     background: rgba(255, 255, 255, 0.699);
 }
-
 .owl-theme .owl-nav [class*='owl-']:hover{
     background: rgba(29, 27, 25, 0.322);
 }
 
+/********ENTORNO**************************************************************************/
 
-/*ENTORNO*/
 .titulo-entorno{
     text-align: center;
     margin: 10vh 0 8vh 0;
     font-weight: 600;
 }
-
 .actividades{
     justify-content: space-evenly;
 }
-
 .actividade{
     flex: 0 0 30%;
     padding: 3vw;
     text-align: center;
 }
-
 .actividade h3{
     font-weight: 600;
     margin: 8px 0 20px 0;
@@ -972,9 +828,7 @@ details[open] summary::before {
 }
 .actividade p{
     margin-bottom: 10px;
-
 }
-
 .actividade a{
     display: block;
     color: rgb(86, 75, 64);
@@ -989,7 +843,6 @@ details[open] summary::before {
 .carousel-entorno .owl-next{
     right: 0px;
 }
-
 .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
     position: absolute;
     top: 35%;
@@ -1023,27 +876,25 @@ details[open] summary::before {
         margin: 0 auto;
     }
 }
-/****/
+
+/*sección Cómo llegar*/
 
 .como-llegar .seccion-izq{
     flex-grow: 1;
     justify-content: space-around;
     align-items: center;
 }
-
 .como-llegar #camiño img{
     height: 400px;
     width: auto;
     display:block;   
 }
-
 .como-llegar #franxa img{
     display: none;
 }
 .como-llegar-texto{
     height: 400px;
     color: white;
-
     flex-direction: column;
     justify-content: space-evenly;
     padding: 50px;
@@ -1071,7 +922,6 @@ details[open] summary::before {
     height: 300px;
     width: 30vw;
 }
-
 @media screen and (max-width:1300px){
     .como-llegar #camiño img{
         display: none;
@@ -1085,7 +935,6 @@ details[open] summary::before {
         height: 300px;
         width: 40vw;
     }
-
 }
 @media screen and (max-width:769px){
     .seccion-izq{
@@ -1102,11 +951,8 @@ details[open] summary::before {
         padding:20px;
     }
 }
-@media screen and (max-width:480px){
-    
-}
 
-/*SOBRE MI*/
+/*******SOBRE MI**************************************************************************/
 
 .contenedor-sobre-mi{
     width: 65vw;
@@ -1119,7 +965,6 @@ details[open] summary::before {
     width: 45%;
     height: 45%;
 }
-
 .contenedor-sobre-mi p{
     width: 45%;
 }
@@ -1152,7 +997,8 @@ details[open] summary::before {
         }
     }
 }
-/*RESERVAS*/
+
+/************RESERVAS**************************************************************************/
 
 .reservas-contido{
     min-height: 75vh;
@@ -1161,7 +1007,6 @@ details[open] summary::before {
     align-items: center;
     text-align: left;
 }
-
 .reservas-contido img{
     width: 300px;
     margin: 30px 0 30px 0;
@@ -1172,24 +1017,18 @@ details[open] summary::before {
     height: 300px;
     padding: 20px;
 }
-
 .reservas-contido div>*{
-    /* color: rgb(63, 59, 49); */
     color: black;
     font-size: 1.1rem;
     font-weight: 400;
 }
-
 #datos-contacto{
     margin-top: 30px;
 }
-
 #datos-contacto>*{
     margin-top: 1rem;
     font-size: 1.2rem;
-    /* color: rgb(86, 75, 64); */
     color: black;
-
     font-weight: 500;
 }
 @media screen and (max-width:900px){
