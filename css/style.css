@@ -517,10 +517,9 @@ footer #contacto p{
 }
 #carousel-rehab .owl-prev , #carousel-rehab .owl-next{
     position: absolute;
-    top: 100px;
+    top: 40%;
     height: 40px;
     width: 40px;
-
 }
 #carousel-rehab .owl-prev:hover , #carousel-rehab .owl-next:hover{
     cursor: pointer;
@@ -535,6 +534,12 @@ footer #contacto p{
 
 .owl-theme .owl-nav [class*='owl-']:hover{
     background: rgba(29, 27, 25, 0.322);
+}
+
+@media all and (max-width:480px){
+    #carousel-rehab .owl-prev , #carousel-rehab .owl-next{
+        top: 44%;
+    }
 }
 
 /*****/
@@ -654,6 +659,9 @@ footer #contacto p{
     .texto-tarxeta h4{
         margin: 0 0 6vw 6vw;
     }
+    .carousel-estancias .owl-prev , .carousel-estancias .owl-next{
+        top: 32%;
+    }
 }
 
 /*franxa tarifas alojamiento*/
@@ -684,7 +692,7 @@ footer #contacto p{
     width: 780px;
 }
 .texto-cursos #obxetivos{
-    padding: 30px 0 30px 0;
+    padding: 10px 0 30px 0;
     list-style: none;
 }
 .texto-cursos #obxetivos li::before {
@@ -783,7 +791,7 @@ details[open] summary::before {
 }
 #carousel-cursos .owl-prev , #carousel-cursos .owl-next{
     position: absolute;
-    top: 100px;
+    top: 40%;
     height: 40px;
     width: 40px;
 }
@@ -845,7 +853,7 @@ details[open] summary::before {
 }
 .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
     position: absolute;
-    top: 35%;
+    top: 40%;
     height: 40px;
     width: 40px;
 }
@@ -856,6 +864,9 @@ details[open] summary::before {
     .carousel-entorno{
         width: 40vw;
     }  
+    .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
+        top: 35%;
+    }
 }
 @media all and (max-width:769px){
     .actividades{
@@ -876,13 +887,20 @@ details[open] summary::before {
         margin: 0 auto;
     }
 }
+@media all and (max-width:480px){
+    .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
+        top: 32%;
+    }
+}
 
 /*sección Cómo llegar*/
 
-.como-llegar .seccion-izq{
+.como-llegar .seccion-der{
+    /* height: 400px; */
     flex-grow: 1;
     justify-content: space-around;
     align-items: center;
+    padding: 20px;
 }
 .como-llegar #camiño img{
     height: 400px;
@@ -893,11 +911,9 @@ details[open] summary::before {
     display: none;
 }
 .como-llegar-texto{
-    height: 400px;
     color: white;
     flex-direction: column;
     justify-content: space-evenly;
-    padding: 50px;
 }
 .como-llegar-texto div{
     margin-top: 10px;
@@ -920,9 +936,12 @@ details[open] summary::before {
 }
 .mapa iframe{
     height: 300px;
-    width: 30vw;
+    width: 25vw;
 }
 @media screen and (max-width:1300px){
+    .como-llegar .seccion-der{
+        padding: 40px;
+    }
     .como-llegar #camiño img{
         display: none;
     }
@@ -936,8 +955,8 @@ details[open] summary::before {
         width: 40vw;
     }
 }
-@media screen and (max-width:769px){
-    .seccion-izq{
+@media screen and (max-width:900px){
+    .seccion-der{
         flex-direction: column;
     }
     .como-llegar #franxa img{
@@ -948,7 +967,10 @@ details[open] summary::before {
         width: 100vw;
     }
     .como-llegar-texto{
-        padding:20px;
+        padding:40px;
+    }
+    .como-llegar .seccion-der{
+        padding: 0;
     }
 }
 
@@ -1014,7 +1036,6 @@ details[open] summary::before {
 .reservas-contido>div{
     margin: 30px;
     background-color: rgba(255, 255, 255, 0.541);
-    height: 300px;
     padding: 20px;
 }
 .reservas-contido div>*{
@@ -1038,5 +1059,10 @@ details[open] summary::before {
     .reservas-contido img{
         width: 250px;
         margin: 30px 0 0 0;
+    }
+}
+@media screen and (max-width:360px){
+    .reservas-contido img{
+        width: 75vw;
     }
 }
