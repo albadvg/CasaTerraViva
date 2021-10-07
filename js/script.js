@@ -42,11 +42,11 @@ $('#carousel-cursos').owlCarousel({
         },
 
         481: {
-            items : 2,
+            items : 1,
         },
 
         789: {
-            items: 3,
+            items: 2,
         },
 
         960: {
@@ -58,5 +58,4 @@ $('#carousel-cursos').owlCarousel({
 $(".carousel-entorno").owlCarousel({
     items:1,
     nav:true,
-    
 });
