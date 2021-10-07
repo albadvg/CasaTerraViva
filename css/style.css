@@ -136,7 +136,7 @@ header{
     margin: 1rem;
 }
 .idioma li{
-    background-color: #9eb254;
+    background-color: #a4b856ba;
     list-style: none;
     padding: .4rem .9rem .4rem .6rem;
     width: 6.5rem;
@@ -145,7 +145,7 @@ header{
 }
 
 .idioma li a{
-    color: white;
+    color: rgb(73, 66, 58);
 }
 .idioma li:nth-child(2){
     display: none;
