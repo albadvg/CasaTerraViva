@@ -59,3 +59,19 @@ $(".carousel-entorno").owlCarousel({
     items:1,
     nav:true,
 });
+
+//seleccion idioma
+const divIdiomas = document.querySelector('.idioma')
+const idioma2 = document.querySelector('.idioma li:nth-child(2)')
+
+divIdiomas.addEventListener('click', menuIdiomas)
+
+function menuIdiomas(){
+    if(idioma2.classList.contains('visible')){
+        idioma2.classList.remove('visible');
+        idioma2.classList.add('oculto')
+    } else {
+        idioma2.classList.remove('oculto');
+        idioma2.classList.add('visible')
+    }
+}

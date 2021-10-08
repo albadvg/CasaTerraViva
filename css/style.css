@@ -159,8 +159,15 @@ header{
     transition: rotate .3s;
 }
 .idioma ul:hover i{
-    rotate: 90deg;
-    
+    rotate: 90deg;   
+}
+@media all and (max-width: 480px){
+    .visible{
+        display: flex;
+    }
+    .oculto{
+        display: none;
+    }
 }
 
 
