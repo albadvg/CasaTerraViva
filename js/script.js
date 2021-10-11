@@ -60,18 +60,44 @@ $(".carousel-entorno").owlCarousel({
     nav:true,
 });
 
+
+
+
 //seleccion idioma
 const divIdiomas = document.querySelector('.idioma')
 const idioma2 = document.querySelector('.idioma li:nth-child(2)')
+const flecha = document.querySelector('.idioma i')
 
-divIdiomas.addEventListener('click', menuIdiomas)
+
+////
+
+function is_touch_enabled() {
+    return ( 'ontouchstart' in window ) || 
+           ( navigator.maxTouchPoints > 0 ) ||
+           ( navigator.msMaxTouchPoints > 0 );
+}
 
 function menuIdiomas(){
+    
     if(idioma2.classList.contains('visible')){
         idioma2.classList.remove('visible');
-        idioma2.classList.add('oculto')
+        idioma2.classList.add('oculto');
+        flecha.classList.remove('rotar')
     } else {
         idioma2.classList.remove('oculto');
         idioma2.classList.add('visible')
+        flecha.classList.add('rotar')
     }
 }
+
+
+if ( is_touch_enabled() ) {
+    divIdiomas.addEventListener('click', menuIdiomas)
+    divIdiomas.addEventListener('blur', menuIdiomas)
+} else {
+    divIdiomas.addEventListener('mouseover', menuIdiomas)
+    divIdiomas.addEventListener('mouseout', menuIdiomas)
+}
+
+
+

@@ -126,49 +126,51 @@ img:not([src]) {
 }
 
 /*selector idioma*/
-header{
+header {
     position: relative;
 }
+
 .idioma{
     position: absolute;
     top: 0;
     right: 0;
     margin: 1rem;
 }
-.idioma li{
+
+.idioma li {
     background-color: #a4b856ba;
     list-style: none;
     padding: .4rem .9rem .4rem .6rem;
     width: 6.5rem;
-    display: flex;
     justify-content: flex-end;
+    align-items: center;
+    color: rgb(73, 66, 58)
 }
 
 .idioma li a{
     color: rgb(73, 66, 58);
 }
-.idioma li:nth-child(2){
-    display: none;
-}
 
-.idioma ul:hover li {
+.idioma li:nth-child(1){
     display: flex;
 }
+
 .idioma ul i{
     margin-right: .5rem;
     transition: rotate .3s;
 }
-.idioma ul:hover i{
+
+.idioma ul i.rotar{
     rotate: 90deg;   
 }
-@media all and (max-width: 480px){
-    .visible{
-        display: flex;
-    }
-    .oculto{
-        display: none;
-    }
+
+.idioma li.visible{
+    display: flex;
 }
+.idioma li.oculto{
+    display: none;
+}
+
 
 
 /*NAVEGACIÓN*/
