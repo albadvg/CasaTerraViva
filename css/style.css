@@ -668,6 +668,10 @@ footer #contacto p{
 .carousel-estancias .owl-theme .owl-nav [class*="owl-"]:hover{
     background: rgba(255, 255, 255, 0.699);
 }
+
+#lavanderia .owl-item {
+    background-color: rgba(174, 203, 94, 0.33);
+}
 @media all and (max-width:1200px){
     .tarxeta{
         flex: 0 0 49%;
