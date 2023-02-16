@@ -378,7 +378,7 @@ footer #contacto p{
 .hero{
     width: 100%;
 }
-.español .hero img{
+.hero img{
     max-height: 100vh;
     object-fit: cover;
     object-position: 50% 70%;
