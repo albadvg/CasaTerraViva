@@ -1,10 +1,6 @@
 /*FONTES*/
-
-/*Montserrat 100, 200, 300, 400, 500, 600, 800*/
-/*Roboto Slab 300,400, 500, 600, 800*/
-/*font-family: 'Fredericka the Great', cursive;*/
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:wght@100;200;300;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&display=swap');
-/*************************/
+
 
 /*ESTILOS BASE*/
 *{
@@ -27,12 +23,16 @@ summary {
 summary::-webkit-details-marker {
     display: none; 
 }
+sup{
+    font-size: .6rem;
+}
 
 /*encabezados*/
 h1, h2, h3, h4, h5{
     font-family: 'Roboto Slab';
     color: rgb(86, 75, 64);
 }
+
 h1{
     font-size: 3rem;
 }
@@ -75,15 +75,6 @@ h4{
 .verde1{
     background-color: rgb(174, 203, 94);
 }
-.verde2{
-    background-color: rgb(217, 249, 161);
-}
-.verde3{
-    background-color: rgb(56, 90, 37);
-}
-.amarelo{
-    background-color: rgb(235, 235, 133);
-}
 .marron{
     background-color: rgb(70, 49, 18);
 }
@@ -93,9 +84,11 @@ h4{
 .letra-blanca{
     color: white;
 }
-
 .letra-marron{
     color: rgb(86, 75, 64);
+}
+.letra-marron2{
+    color:rgb(70, 49, 18);
 }
 
 /*franxa xenérica*/
@@ -107,7 +100,6 @@ h4{
 }
 
 /*lazy load*/
-
 img.lazy {
     opacity: .1;
 }
@@ -120,7 +112,6 @@ img.error,
 img.entered {
     opacity: 1;
 }
-
 img:not([src]) {
     visibility: hidden;
 }
@@ -129,14 +120,12 @@ img:not([src]) {
 header {
     position: relative;
 }
-
 .idioma{
     position: absolute;
     top: 0;
     right: 0;
     margin: 1rem;
 }
-
 .idioma li {
     background-color: #a4b856ba;
     list-style: none;
@@ -146,31 +135,25 @@ header {
     align-items: center;
     color: rgb(73, 66, 58)
 }
-
 .idioma li a{
     color: rgb(73, 66, 58);
 }
-
 .idioma li:nth-child(1){
     display: flex;
 }
-
 .idioma ul i{
     margin-right: .5rem;
     transition: rotate .3s;
 }
-
 .idioma ul i.rotar{
     rotate: 90deg;   
 }
-
 .idioma li.visible{
     display: flex;
 }
 .idioma li.oculto{
     display: none;
 }
-
 
 
 /*NAVEGACIÓN*/
@@ -247,10 +230,22 @@ nav .barra-vertical-menu{
     font-size:2rem ;
     font-weight: 200;
     color: rgb(86, 75, 64);
+    transform: translateY(-3px);
 }
 @media screen and (max-width:480px){
     nav .barra-vertical-menu{
         font-size: 1.4rem;
+    }
+    nav .barra-vertical-menu:nth-of-type(8){
+        display: none;
+    }
+}
+@media screen and (max-width:400px){
+    nav .barra-vertical-menu:nth-of-type(8){
+        display: inline;
+    }
+    nav .barra-vertical-menu:nth-of-type(6){
+        display: none;
     }
 }
 nav .menu-seleccionado{
@@ -371,11 +366,9 @@ footer #contacto p{
     padding: .1rem;
     text-align: center;
 }
-
 .credito-deseño a,.credito-deseño p{
     font-size: .7rem;
 }
-
 .credito-deseño a{
     color: rgb(211, 204, 186);
 }
@@ -384,6 +377,12 @@ footer #contacto p{
 
 .hero{
     width: 100%;
+}
+.español .hero img{
+    max-height: 100vh;
+    object-fit: cover;
+    object-position: 50% 70%;
+    
 }
 .hero img{
     vertical-align: middle;
@@ -456,7 +455,7 @@ footer #contacto p{
     width: 20vw;
 }
 #entorno img{
-    width: 20vw;
+    width: 25vw;
 }
 #cursos img{
     width:25vw ;
@@ -469,19 +468,21 @@ footer #contacto p{
     color:rgb(86, 75, 64);
 }
 @media all and (max-width:1200px){
-    #alojamiento img , #entorno img{
+    #alojamiento img{
         width: 25vw;
     }
-    #cursos img{
+    #cursos img,
+    #entorno img{
         width:30vw ;
     
     }
 }
 @media all and (max-width:900px){
-    #alojamiento img , #entorno img{
+    #alojamiento img{
         width: 30vw;
     }
-    #cursos img{
+    #cursos img,
+    #entorno img{
         width:35vw ;
     
     }
@@ -514,7 +515,7 @@ footer #contacto p{
     }
     
     .ver-mas{
-        padding-top:15spx;
+        padding-top:15px;
     }
 }
 
@@ -525,7 +526,7 @@ footer #contacto p{
 #reservas .texto{
     width: 500px;
     color: rgb(61, 60, 60);
-    padding: 20px 0 30px 0;
+    padding: 35px 0 45px 0;
 }
 #reservas .texto .contenedor-flex{
     flex-direction: column;
@@ -540,7 +541,7 @@ footer #contacto p{
     color: white;   
 }
 #reservas .texto h2{
-    padding: 10px 0 20px 0px;
+    padding: 3px 0 20px 0px;
 }
 
 /*******ALOJAMIENTO****************************************************************/
@@ -558,6 +559,11 @@ footer #contacto p{
 }
 
 /*carousel rehabilitación*/
+
+#carousel-rehab .owl-item img{
+    aspect-ratio: 8/5.3;
+    object-fit: cover;
+}
 
 #carousel-rehab .owl-prev{
     left: 0px
@@ -595,7 +601,7 @@ footer #contacto p{
 /*****/
 
 .casa-hoy{
-    padding: 50px 0 50px 0;
+    padding: 50px 0 0 0;
     margin-top: -10px;
     align-items: center;
 }
@@ -643,6 +649,11 @@ footer #contacto p{
 }
 .carousel-estancias{
     width: 25vw;
+    margin: 0;
+}
+.carousel-estancias .owl-item img{
+    aspect-ratio: 8/5.3;
+    object-fit: cover;
 }
 .carousel-estancias .owl-prev{
     left: 0px
@@ -719,6 +730,11 @@ footer #contacto p{
     }
 }
 
+.foto-dormitorio-2,
+.foto-salon-3{
+    object-position: 50% bottom;
+}
+
 /*franxa tarifas alojamiento*/
 
 .contido-tarifas{
@@ -739,7 +755,7 @@ footer #contacto p{
 /*******CURSOS***********************************************************************/
 
 .texto-cursos{
-    margin: 50px 0 60px 0;
+    margin: 50px 0 55px 0;
     flex-direction: column;
     text-align: left;
 }
@@ -747,7 +763,7 @@ footer #contacto p{
     width: 780px;
 }
 .ingles .texto-cursos>*{
-    width: 860px;
+    width: 870px;
 }
 
 .texto-cursos #obxetivos{
@@ -763,7 +779,7 @@ footer #contacto p{
     width: 1.2em; 
 }
 .cursos details{
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .cursos summary{
     cursor: pointer;
@@ -787,7 +803,7 @@ details[open] summary::before {
     display: inline;
 }
 .cursos details>div{
-    padding: 20px 0;
+    padding-top: 20px;
     justify-content: space-between;
 }
 .cursos details #programa span, .cursos details #fechas span{
@@ -820,7 +836,7 @@ details[open] summary::before {
 }
 @media screen and (max-width: 900px){
     .texto-cursos{
-        margin: 40px 0 40px 0; ;
+        margin: 40px 0 25px 0; ;
     }
     .texto-cursos>*,
     .ingles .texto-cursos>*{
