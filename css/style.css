@@ -378,15 +378,16 @@ footer #contacto p{
 .hero{
     width: 100%;
 }
-.hero img{
+.hero img,
+.hero video{
     max-height: 100vh;
+    width: 100vw;
     object-fit: cover;
     object-position: 50% 70%;
-    
-}
-.hero img{
     vertical-align: middle;
 }
+
+
 
 /*sub-header*/
 
@@ -684,20 +685,12 @@ footer #contacto p{
     background-color: rgba(174, 203, 94, 0.33);
 }
 @media all and (max-width:1200px){
-    .tarxeta{
-        flex: 0 0 49%;
-    }
     .carousel-estancias{
         width: 40vw;
     }  
-    .texto-tarxeta h4{
-        margin: 0 0 2vw 1vw;
-    }
+
 }
 @media all and (max-width:769px){
-    .tarxeta{
-        flex: 0 0 99%
-    }
     .texto-tarxeta{
         margin: 0 auto;
     }
@@ -709,7 +702,7 @@ footer #contacto p{
         top: 40%;
     }
     .texto-tarxeta h4{
-        margin: 0 0 3vw 5vw;
+        margin: 0 0 3vw 0;
     }
 }
 @media all and (max-width:560px){
