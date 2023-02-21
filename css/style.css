@@ -381,7 +381,7 @@ footer #contacto p{
 .hero img,
 .hero video{
     max-height: 100vh;
-    width: 100vw;
+    width: 100%;
     object-fit: cover;
     object-position: 50% 70%;
     vertical-align: middle;
@@ -705,10 +705,7 @@ footer #contacto p{
     }
 }
 @media all and (max-width:560px){
-    .tarxeta:nth-child(2),
-    .tarxeta:nth-child(5),
-    .tarxeta:nth-child(7),
-    .tarxeta:nth-child(8){
+    .tarxeta:nth-child(5){
         margin-bottom: 35px;
     }
 }
