@@ -650,13 +650,13 @@ footer #contacto p{
     justify-content: space-around;
     padding: 2vw 0 3vw 0;
 }
-html[lang="En"] #carousel-rehab{
+#carousel-rehab{
     padding-bottom: 50px;
 }
 
 @media screen and (max-width: 748px){
     .tarxetas{
-        padding: 5vw 0 4vw 0;
+        padding: 8vw 0 4vw 0;
     }
 }
 .tarxeta{
