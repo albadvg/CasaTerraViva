@@ -17,6 +17,9 @@ body{
     max-width: 100%;
 }
 
+img{
+    width: 100%;
+}
 summary {
     list-style: none
 }
@@ -222,9 +225,9 @@ nav li  a{
     nav li{
         margin-top: 15px;
     }
-    nav li a{
+    /* nav li a{
         font-size: .85rem;
-    }
+    } */
 }
 nav .barra-vertical-menu{
     font-size:2rem ;
@@ -232,15 +235,20 @@ nav .barra-vertical-menu{
     color: rgb(86, 75, 64);
     transform: translateY(-3px);
 }
-@media screen and (max-width:480px){
-    nav .barra-vertical-menu{
-        font-size: 1.4rem;
+@media screen and (max-width: 724px) {
+    nav .barra-vertical-menu:nth-of-type(10){
+        display: none;
+    }
+}
+@media screen and (max-width: 599px) {
+    nav .barra-vertical-menu:nth-of-type(10){
+        display: inline;
     }
     nav .barra-vertical-menu:nth-of-type(8){
         display: none;
     }
 }
-@media screen and (max-width:400px){
+@media screen and (max-width: 516px) {
     nav .barra-vertical-menu:nth-of-type(8){
         display: inline;
     }
@@ -248,6 +256,7 @@ nav .barra-vertical-menu{
         display: none;
     }
 }
+
 nav .menu-seleccionado{
     color: white;
 }
@@ -639,6 +648,16 @@ footer #contacto p{
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-around;
+    padding: 2vw 0 3vw 0;
+}
+html[lang="En"] #carousel-rehab{
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 748px){
+    .tarxetas{
+        padding: 5vw 0 4vw 0;
+    }
 }
 .tarxeta{
     padding: 3vw;
