@@ -19,6 +19,7 @@ body{
 
 img{
     width: 100%;
+    height: auto;
 }
 summary {
     list-style: none
@@ -55,6 +56,47 @@ h4{
     h2{
         font-size: 1.5rem;
     }
+}
+
+/*carrusel de imaxes (owl-carousel)*/
+.owl-carousel{
+    position: relative;
+}
+.owl-nav{
+    position:absolute;
+    width: 100%;
+    height: 90%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#carousel-rehab .owl-nav,
+#carousel-cursos .owl-nav{
+    height: 100%;
+}
+.owl-nav .owl-prev ,
+.owl-nav .owl-next{
+    height: 40px;
+    width: 40px;
+}
+.owl-nav .owl-prev:hover ,
+.owl-nav .owl-next:hover{
+    cursor:pointer;
+}
+.owl-prev span , .owl-next span{
+    font-size: 80px;
+    color: rgba(255, 255, 255);
+}
+.owl-theme .owl-nav [class*="owl-"]:hover{
+    background: rgba(255, 255, 255, 0.699);
+}
+
+.owl-theme .owl-nav [class*='owl-']:hover{
+    background: rgba(29, 27, 25, 0.322);
+}
+.owl-dots{
+    margin-top: 10px;
 }
 
 /*CLASES BÁSICAS*/
@@ -103,16 +145,16 @@ h4{
 }
 
 /*lazy load*/
-img.lazy {
+.lazy {
     opacity: .1;
 }
 img:not(.initial) {
     transition: opacity 1s;
 }
-img.initial,
-img.loaded,
-img.error,
-img.entered {
+.initial,
+.loaded,
+.error,
+.entered {
     opacity: 1;
 }
 img:not([src]) {
@@ -148,13 +190,13 @@ header {
     margin-right: .5rem;
     transition: rotate .3s;
 }
-.idioma ul i.rotar{
+.idioma ul .rotar{
     rotate: 90deg;   
 }
-.idioma li.visible{
+.idioma .visible{
     display: flex;
 }
-.idioma li.oculto{
+.idioma .oculto{
     display: none;
 }
 
@@ -289,6 +331,7 @@ footer h5{
 }
 .contido-footer a{
     color: white;
+    padding: .4rem;
 }
 .contido-footer p{
     color: white
@@ -296,7 +339,7 @@ footer h5{
 footer i{
     margin-right: 15px;
 }
-footer #contacto p{
+footer #contacto a{
     padding: .4rem;
 }
 #menu-footer ul{
@@ -380,6 +423,7 @@ footer #contacto p{
 }
 .credito-deseño a{
     color: rgb(211, 204, 186);
+    margin-left: .4rem;
 }
 
 /**********INICIO***********************************************************/
@@ -417,6 +461,10 @@ footer #contacto p{
 }
 .inicio .sub-header h2{
     line-height: 2rem;   
+}
+
+.inicio .sub-header p{
+    margin-bottom: 10px;
 }
 @media all and (max-width:900px){
     .inicio .sub-header div{
@@ -564,6 +612,7 @@ footer #contacto p{
 }
 .alojamiento .sub-header h2{
     margin-bottom: 30px;
+    margin-top: 10px;
     align-self: flex-start;
 }
 
@@ -573,38 +622,8 @@ footer #contacto p{
     aspect-ratio: 8/5.3;
     object-fit: cover;
 }
-
-#carousel-rehab .owl-prev{
-    left: 0px
-}
-#carousel-rehab .owl-next{
-    right: 0px;
-}
-#carousel-rehab .owl-prev , #carousel-rehab .owl-next{
-    position: absolute;
-    top: 40%;
-    height: 40px;
-    width: 40px;
-}
-#carousel-rehab .owl-prev:hover , #carousel-rehab .owl-next:hover{
-    cursor: pointer;
-}
-#carousel-rehab .owl-prev span , #carousel-rehab .owl-next span{
-    font-size: 80px;
-    color: rgba(255, 255, 255, 0.788);
-}
-#carousel-rehab .owl-theme .owl-nav [class*="owl-"]:hover{
-    background: rgba(255, 255, 255, 0.699);
-}
-
-.owl-theme .owl-nav [class*='owl-']:hover{
-    background: rgba(29, 27, 25, 0.322);
-}
-
-@media all and (max-width:480px){
-    #carousel-rehab .owl-prev , #carousel-rehab .owl-next{
-        top: 44%;
-    }
+.franxa-restauracion{
+    height:50px;
 }
 
 /*****/
@@ -650,9 +669,6 @@ footer #contacto p{
     justify-content: space-around;
     padding: 2vw 0 3vw 0;
 }
-#carousel-rehab{
-    padding-bottom: 50px;
-}
 
 @media screen and (max-width: 748px){
     .tarxetas{
@@ -674,30 +690,6 @@ footer #contacto p{
     aspect-ratio: 8/5.3;
     object-fit: cover;
 }
-.carousel-estancias .owl-prev{
-    left: 0px
-}
-.carousel-estancias .owl-next{
-    right: 0px;
-}
-.carousel-estancias .owl-prev , .carousel-estancias .owl-next{
-    position: absolute;
-    top: 35%;
-    height: 40px;
-    width: 40px;
-}
-.carousel-estancias .owl-prev:hover , .carousel-estancias .owl-next:hover{
-    cursor: pointer;
-}
-
-.carousel-estancias .owl-prev span , .carousel-estancias .owl-next span{
-    font-size: 80px;
-    color: rgba(255, 255, 255, 0.788);
-}
-
-.carousel-estancias .owl-theme .owl-nav [class*="owl-"]:hover{
-    background: rgba(255, 255, 255, 0.699);
-}
 
 .lavanderia .owl-item {
     background-color: rgba(174, 203, 94, 0.33);
@@ -716,9 +708,6 @@ footer #contacto p{
     .carousel-estancias{
         width: 80vw;
     }
-    .carousel-estancias .owl-prev , .carousel-estancias .owl-next{
-        top: 40%;
-    }
     .texto-tarxeta h4{
         margin: 0 0 3vw 0;
     }
@@ -732,9 +721,6 @@ footer #contacto p{
     
     .texto-tarxeta h4{
         margin: 0 0 6vw 6vw;
-    }
-    .carousel-estancias .owl-prev , .carousel-estancias .owl-next{
-        top: 32%;
     }
 }
 
@@ -863,37 +849,29 @@ details[open] summary::before {
         font-size: 1.3rem;
     }
 }
+@media screen and (max-width: 480px){
+    .cursos summary h3{
+        font-size: 1.1rem;
+    }
+    .cursos summary::before{
+        transform:scale(80%);
+        left:10px;
+    }
+}
+@media screen and (max-width: 390px){
+    .cursos summary h3{
+        font-size: 1rem;
+    }
+    .cursos summary::before{
+        transform:scale(65%);
+        left:8px;
+    }
+}
 
 /*carousel fotos cata*/
 
-
-#carousel-cursos .owl-prev{
-    left: 0px
-}
-#carousel-cursos .owl-next{
-    right: 0px;
-}
-#carousel-cursos .owl-prev , #carousel-cursos .owl-next{
-    position: absolute;
-    top: 40%;
-    height: 40px;
-    width: 40px;
-}
-#carousel-cursos .owl-prev:hover , #carousel-cursos .owl-next:hover{
-    cursor: pointer;
-}
-#carousel-cursos .owl-prev span , #carousel-cursos .owl-next span{
-    font-size: 80px;
-    color: rgba(255, 255, 255, 0.788);
-}
 #carousel-cursos .owl-theme .owl-nav{
     margin-top: 0 !important;
-}
-#carousel-cursos .owl-theme .owl-nav [class*="owl-"]:hover{
-    background: rgba(255, 255, 255, 0.699);
-}
-.owl-theme .owl-nav [class*='owl-']:hover{
-    background: rgba(29, 27, 25, 0.322);
 }
 
 /********ENTORNO**************************************************************************/
@@ -904,7 +882,7 @@ details[open] summary::before {
     font-weight: 600;
 }
 .actividades{
-    justify-content: space-evenly;
+    justify-content: space-around;
     margin-top: 40px;
 }
 .actividade{
@@ -930,53 +908,27 @@ details[open] summary::before {
 .carousel-entorno{
     width: 30vw;
 }
-.carousel-entorno .owl-prev{
-    left: 0px
-}
-.carousel-entorno .owl-next{
-    right: 0px;
-}
-.carousel-entorno .owl-prev , .carousel-entorno .owl-next{
-    position: absolute;
-    top: 40%;
-    height: 40px;
-    width: 40px;
-}
 @media all and (max-width:1200px){
-    .actividade{
-        flex: 0 0 49%;
-    }
     .carousel-entorno{
         width: 40vw;
     }  
-    .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
-        top: 35%;
-    }
 }
 @media all and (max-width:769px){
     .actividades{
         margin-bottom: 20px;
     }
     .actividade{
-        flex: 0 0 99%;
         margin-bottom: 20px;
     }
     .carousel-entorno{
         width: 80vw;
-    }
-    .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
-        top: 40%;
     }
     .actividade p{
         width: 80vw;
         margin: 0 auto;
     }
 }
-@media all and (max-width:480px){
-    .carousel-entorno .owl-prev , .carousel-entorno .owl-next{
-        top: 32%;
-    }
-}
+
 
 /*sección Cómo llegar*/
 
@@ -1098,11 +1050,13 @@ details[open] summary::before {
         width: 80vw;
         margin: 40px 0 40px 0;
     }
-    @media screen and (max-width:560px){
-        .sobre-mi img{
-            width: 80vw;
-        }
+}
+
+@media screen and (max-width:560px){
+    .sobre-mi img{
+        width: 80vw;
     }
+    
 }
 
 /************RESERVAS**************************************************************************/
