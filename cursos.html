@@ -7,6 +7,10 @@
         <meta name="description" content="Los cursos están abiertos a toda persona interesada, independientemente de que estén alojados en la vivienda, y tienen lugar en la vivienda anexa al alojamiento turístico, de acceso independiente.">
         <title>Casa Terra Viva - Cursos de cata</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&text=Casa%20Terra%20Viva&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&family=Arbutus+Slab&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
         <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
@@ -21,14 +25,14 @@
         <header class="contenedor-flex verde1">
             <div class="idioma">
                 <ul>
-                    <li><i class="fas fa-angle-right"></i>Español</li>
-                    <li class="oculto"><a href="classes.html">English</a></li>
+                    <li><i class="fas fa-angle-right"></i>ES</li>
+                    <li class="oculto"><a href="classes.html">EN</a></li>
                 </ul>
             </div>
             <div class="cabeceira">
                 <a href="index.html"><h1>Casa Terra Viva</h1></a>
             </div>
-            <nav>
+            <nav class="menu-escritorio">
                 <ul class="contenedor-flex">
                     <li><a href="index.html">INICIO</a> </li>
                     <li class="barra-vertical-menu">|</li>
@@ -42,21 +46,26 @@
                     <li class="barra-vertical-menu">|</li>
                     <li><a href="reservas.html">RESERVAS</a></li>
                 </ul>
-            </nav>            
+            </nav>   
+            <nav class="menu-hamburguesa">
+                <i class="bi bi-list boton-burguer"></i>
+                <ul>
+                    <i class="bi bi-x-lg boton-aspa"></i>
+                    <li><a href="index.html" >INICIO</a> </li>
+                    <li><a href="alojamiento.html">ALOJAMIENTO</a> </li>
+                    <li><a href="cursos.html" class="menu-seleccionado bold">CURSOS DE CATA</a></li>
+                    <li><a href="entorno.html">ENTORNO</a></li>
+                    <li><a href="sobre-mi.html">SOBRE MI</a></li>
+                    <li><a href="reservas.html">RESERVAS</a></li>
+                </ul>
+            </nav>         
         </header>
 
         <main>
-            <div class="container">
-                <div class="owl-carousel owl-theme " id="carousel-cursos">
-                    <img src="img/cursos-cata-1.jpg" alt="mesas preparadas para el curso de cata" width="100%">
-                    <img src="img/cursos-cata-2.jpg" alt="cartel de curso de cata" width="100%">
-                    <img src="img/cursos-cata-3.jpg" alt="Bibiana en un curso de cata" width="100%">                    
-                    <img src="img/cursos-cata-4.jpg" alt="participantes de un curso de cata" width="100%">
-                    <img src="img/cursos-cata-5.jpg" alt="mesa con copas y rueda de aromas" width="100%">
-                    <img src="img/cursos-cata-6.jpg" alt="participantes con copa de vino" width="100%">
-                    
-                </div>
+            <div class="titulo-paxina">
+                <h2>Cursos de Cata</h2>
             </div>
+           
             <div class="franxa texto-cursos contenedor-flex">
                 <div>
                     <p>
@@ -90,11 +99,11 @@
 
                 <details>
                     <summary>
-                        <h3 class="letra-marron">MÓDULO 1: Vinos blancos gallegos</h3>
+                        <h4 class="letra-marron">MÓDULO 1: Vinos blancos gallegos</h4>
                     </summary>
                     <div class="contenedor-flex">
                         <div id="programa">
-                            <span id="cabecera-programa">PROGRAMA</span>
+                            <span class="cabecera-programa">PROGRAMA</span>
                             <div id="contenedor-programa">
                                 <ol>
                                     <li>Cómo describir el vino: La rueda de aromas</li>
@@ -105,12 +114,11 @@
                             </div>                          
                         </div>
                         <div id="fechas">
-                            <span id="cabecera-fechas">FECHAS</span>
+                            <span class="cabecera-fechas">FECHAS</span>
                             <div id="contenedor-fechas">
                                 <ul>
                                     <li>Sábado, 29 abril, 6:30 pm </li>
-                                    <li class="dia-completo">Sábado, 27 mayo, 6:30 pm </li> 
-                                        <span class="palabra-completo">completo</span>
+                                    <li class="completo">Sábado,  <span>27 mayo, 6:30 pm<span class="palabra-completo">Completo</span></span></li>                                    
                                     <li>Sábado, 24 junio, 6:30 pm</li>
                                     <li>Sábado, 29 julio, 6:30 pm</li>
                                 </ul>
@@ -120,8 +128,18 @@
                 </details>
 
             </div>          
-
-            <div class="tarifas franxa contenedor-flex verde1 letra-marron">
+            <div class="container">
+                <div class="owl-carousel owl-theme " id="carousel-cursos">
+                    <img src="img/cursos-cata-1.jpg" alt="mesas preparadas para el curso de cata" width="100%">
+                    <img src="img/cursos-cata-2.jpg" alt="cartel de curso de cata" width="100%">
+                    <img src="img/cursos-cata-3.jpg" alt="Bibiana en un curso de cata" width="100%">                    
+                    <img src="img/cursos-cata-4.jpg" alt="participantes de un curso de cata" width="100%">
+                    <img src="img/cursos-cata-5.jpg" alt="mesa con copas y rueda de aromas" width="100%">
+                    <img src="img/cursos-cata-6.jpg" alt="participantes con copa de vino" width="100%">
+                    
+                </div>
+            </div>
+            <div class="tarifas franxa contenedor-flex verde-claro letra-marron">
                 <div class="contido-tarifas contenedor-flex ">
                     <h3>Tarifas</h3>
                     <p>2-3 personas: 45€<br> 

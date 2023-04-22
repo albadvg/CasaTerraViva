@@ -1,3 +1,4 @@
+//CARRUSEL DE IMAXES
 
 $("#carousel-rehab").owlCarousel({
     items:4,
@@ -61,8 +62,6 @@ $(".carousel-entorno").owlCarousel({
 });
 
 
-
-
 //seleccion idioma
 const divIdiomas = document.querySelector('.idioma')
 const idioma2 = document.querySelector('.idioma li:nth-child(2)')
@@ -98,6 +97,33 @@ if ( is_touch_enabled() ) {
     divIdiomas.addEventListener('mouseover', menuIdiomas)
     divIdiomas.addEventListener('mouseout', menuIdiomas)
 }
+
+
+
+
+
+//MENÚ HAMBURGUESA
+
+let botonBurguer = document.querySelector('.boton-burguer');
+let botonAspa = document.querySelector('.boton-aspa');
+let menuMobil = botonBurguer.nextElementSibling;
+let body =  document.querySelector('body');
+
+botonBurguer.addEventListener('click', showMenu);
+botonAspa.addEventListener('click', hideMenu)
+
+function showMenu() {
+    menuMobil.classList.add('amosar-menu');
+    body.style.height = '100vh';
+    body.style.overflowY = 'hidden';
+}
+function hideMenu() {
+    menuMobil.classList.remove('amosar-menu');
+    body.style.height = 'unset';
+    body.style.overflowY = 'visible';
+}
+
+
 
 
 

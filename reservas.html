@@ -8,6 +8,10 @@
         
         <title>Casa Terra Viva - Reservas</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&text=Casa%20Terra%20Viva&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&family=Arbutus+Slab&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="css/style.css">
 
@@ -18,14 +22,14 @@
         <header class="contenedor-flex verde1">
             <div class="idioma">
                 <ul>
-                    <li><i class="fas fa-angle-right"></i>Español</li>
-                    <li class="oculto"><a href="reservations.html">English</a></li>
+                    <li><i class="fas fa-angle-right"></i>ES</li>
+                    <li class="oculto"><a href="reservations.html">EN</a></li>
                 </ul>
             </div>
             <div class="cabeceira">
                 <a href="index.html"><h1>Casa Terra Viva</h1></a>
             </div>
-            <nav>
+            <nav class="menu-escritorio">
                 <ul class="contenedor-flex">
                     <li><a href="index.html">INICIO</a> </li>
                     <li class="barra-vertical-menu">|</li>
@@ -40,14 +44,28 @@
                     <li><a href="reservas.html" class="menu-seleccionado bold">RESERVAS</a></li>
                 </ul>
             </nav>
-            
+            <nav class="menu-hamburguesa">
+                <i class="bi bi-list boton-burguer"></i>
+                <ul>
+                    <i class="bi bi-x-lg boton-aspa"></i>
+                    <li><a href="index.html" >INICIO</a> </li>
+                    <li><a href="alojamiento.html">ALOJAMIENTO</a> </li>
+                    <li><a href="cursos.html">CURSOS DE CATA</a></li>
+                    <li><a href="entorno.html">ENTORNO</a></li>
+                    <li><a href="sobre-mi.html">SOBRE MI</a></li>
+                    <li><a href="reservas.html" class="menu-seleccionado bold">RESERVAS</a></li>
+                </ul>
+            </nav> 
         </header>
 
         <main>
+            
             <div class="reservas-contido contenedor-flex">
                 <img src="img/finca-reservas.jpg" alt="sillas bajo la higuera de la finca" width="100%" class="lazy">
                 <div class="contenedor-flex flex-column">
                     <div>
+                <h2>Reservas</h2>
+
                         <p>
                             Ponte en contacto por teléfono <br>
                             o correo electrónico para reservar <br>
@@ -110,50 +128,5 @@
         <script src="owlcarousel/owl.carousel.min.js"></script>
         <script src="js/script.js"></script>
         
-        <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
-        <script>
-            (function () {
-                function logElementEvent(eventName, element) {
-                console.log(Date.now(), eventName, element.getAttribute("src"));
-                }
-
-                var callback_enter = function (element) {
-                logElementEvent("🔑 ENTERED", element);
-                };
-                var callback_exit = function (element) {
-                logElementEvent("🚪 EXITED", element);
-                };
-                var callback_loading = function (element) {
-                logElementEvent("⌚ LOADING", element);
-                };
-                var callback_loaded = function (element) {
-                logElementEvent("👍 LOADED", element);
-                };
-                var callback_error = function (element) {
-                logElementEvent("💀 ERROR", element);
-                element.src =
-                    "https://via.placeholder.com/440x560/?text=Error+Placeholder";
-                };
-                var callback_finish = function () {
-                logElementEvent("✔️ FINISHED", document.documentElement);
-                };
-                var callback_cancel = function (element) {
-                logElementEvent("🔥 CANCEL", element);
-                };
-
-                var ll = new LazyLoad({
-                    threshold: 0,
-                    // Assign the callbacks defined above
-                    callback_enter: callback_enter,
-                    callback_exit: callback_exit,
-                    callback_cancel: callback_cancel,
-                    callback_loading: callback_loading,
-                    callback_loaded: callback_loaded,
-                    callback_error: callback_error,
-                    callback_finish: callback_finish
-                });
-            })();
-        </script>
     </body>  
 </html>   

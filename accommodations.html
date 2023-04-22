@@ -8,8 +8,11 @@
 
         <title>Casa Terra Viva - Accommodations</title>
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&text=Casa%20Terra%20Viva&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&family=Arbutus+Slab&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">    
         <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.css">
         <link rel="stylesheet" href="css/style.css">
@@ -22,14 +25,14 @@
         <header class="contenedor-flex verde1">
             <div class="idioma">
                 <ul>
-                    <li><i class="fas fa-angle-right"></i>English</li>
-                    <li class="oculto"><a href="alojamiento.html">Español</a></li>
+                    <li><i class="fas fa-angle-right"></i>EN</li>
+                    <li class="oculto"><a href="alojamiento.html">ES</a></li>
                 </ul>
             </div>
             <div class="cabeceira">
                 <a href="en/index.html"><h1>Casa Terra Viva</h1></a>
             </div>
-            <nav>
+            <nav class="menu-escritorio">
                 <ul class="contenedor-flex">
                     <li><a href="en/index.html" >HOME</a> </li>
                     <li class="barra-vertical-menu">|</li>
@@ -43,49 +46,28 @@
                     <li class="barra-vertical-menu">|</li>
                     <li><a href="reservations.html">RESERVATIONS</a></li>
                 </ul>
-            </nav>            
+            </nav>  
+            <nav class="menu-hamburguesa">
+                <i class="bi bi-list boton-burguer"></i>
+                <ul>
+                    <i class="bi bi-x-lg boton-aspa"></i>
+                    <li><a href="en/index.html" >HOME</a> </li>
+                    <li><a href="alojamiento.html" class="menu-seleccionado bold">ACCOMMODATIONS</a> </li>
+                    <li><a href="cursos.html">WINE TASTING</a></li>
+                    <li><a href="entorno.html">SURROUNDINGS</a></li>
+                    <li><a href="sobre-mi.html">ABOUT</a></li>
+                    <li><a href="reservas.html">RESERVATIONS</a></li>
+                </ul>
+            </nav>          
         </header>
 
         <main>
-            <div class="hero">
-                <video controls>
-                    <source src="video/video-aereo-cut.mp4" type="video/mp4">
-                </video>
+            <!-- <div class="hero">
+                <img src="img/finca-4.jpg" alt="">
+            </div> -->
+            <div class="titulo-paxina">
+                <h2>Accommodations</h2>
             </div>
-
-            <div class="sub-header contenedor-flex verde1 letra-blanca">
-                <div>
-                    <h2 class="letra-blanca">The restoration</h2>
-                    <p> This photo gallery represents 5 years of restoration made possible 
-                        by many professionals and friends. <br>May these pictures serve to
-                        celebrate their talent and generosity and <br>to thank all of them from the bottom of my heart.
-                    </p>
-                </div>
-      
-            </div>
-
-            <div class="container">
-                <div class="owl-carousel owl-theme verde1" id="carousel-rehab">
-                    <div class=""><img src="img/restauracion-casa-1.jpg" alt="house with brushwood" width="100%" ></div>
-                    <div class=""><img src="img/restauracion-casa-2.jpg" alt="friend helping with works" width="100%" ></div>
-                    <div class=""><img src="img/restauracion-casa-5.jpg" alt="burning brushwood" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-3.jpg" alt="tractor in the yard" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-4.jpg" alt="tractor plowing" width="100%" ></div>
-                    <div class=""><img src="img/restauracion-casa-7.jpg" alt="friends behind restored gate" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-8.jpg" alt="bedroom before restoration" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-9.jpg" alt="worker on the roof" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-6.jpg" alt="worker laying floor tile" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-10.jpg" alt="friend painting the bedroom" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-11.jpg" alt="insulation of the house" width="100%"></div>                   
-                    <div class=""><img src="img/restauracion-casa-12.jpg" alt="tractor moving stones" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-13.jpg" alt="friends with farm tools" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-14.jpg" alt="apple trees" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-15.jpg" alt="finishing door frame with chisel" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-16.jpg" alt="greenhouse in the yard" width="100%"></div>
-                </div>
-            </div>
-            
-            <div class="franxa franxa-restauracion verde1"></div>
             
             <div class="tarxetas contenedor-flex">
                 <div class="tarxeta">
@@ -196,10 +178,10 @@
                 </div>
                 
             </div>
-
-            <div class="contenedor-flex verde1  casa-hoy flex-column">
-                <h2 class="letra-blanca">The house today</h2>
-                <p class="letra-blanca"> 
+            
+            <div class="contenedor-flex verde-claro  casa-hoy flex-column">
+                <h3>The house today</h3>
+                <p> 
                     The rental unit, 81 m<sup>2</sup> (872 ft<sup>2</sup>) is a complete dwelling on the East side of an old farmhouse, with private entrance both 
                     to the house and to the yard. The presence in the house of iron plows and even wooden ones, as well as the instruments to 
                     weave the flax, are a testimony that the house is at least 180 years old. The house has two sleeping quarters - one with a 
@@ -208,8 +190,40 @@
                     use, an horreo (granary) for the kids to play, and a yard of approximately 400 m<sup>2</sup> (4300 ft<sup>2</sup>) also for private use.
                 </p>
             </div>
+            <div class="sub-header contenedor-flex verde1 letra-blanca">
+                <div>
+                    <h3 class="letra-blanca">The restoration</h3>
+                    <p> This photo gallery represents 5 years of restoration made possible 
+                        by many professionals and friends. <br>May these pictures serve to
+                        celebrate their talent and generosity and <br>to thank all of them from the bottom of my heart.
+                    </p>
+                </div>
+      
+            </div>
 
-            <div class="tarifas franxa contenedor-flex verde1 letra-marron">
+            <div class="container">
+                <div class="owl-carousel owl-theme verde1" id="carousel-rehab">
+                    <div class=""><img src="img/restauracion-casa-1.jpg" alt="house with brushwood" width="100%" ></div>
+                    <div class=""><img src="img/restauracion-casa-2.jpg" alt="friend helping with works" width="100%" ></div>
+                    <div class=""><img src="img/restauracion-casa-5.jpg" alt="burning brushwood" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-3.jpg" alt="tractor in the yard" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-4.jpg" alt="tractor plowing" width="100%" ></div>
+                    <div class=""><img src="img/restauracion-casa-7.jpg" alt="friends behind restored gate" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-8.jpg" alt="bedroom before restoration" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-9.jpg" alt="worker on the roof" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-6.jpg" alt="worker laying floor tile" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-10.jpg" alt="friend painting the bedroom" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-11.jpg" alt="insulation of the house" width="100%"></div>                   
+                    <div class=""><img src="img/restauracion-casa-12.jpg" alt="tractor moving stones" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-13.jpg" alt="friends with farm tools" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-14.jpg" alt="apple trees" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-15.jpg" alt="finishing door frame with chisel" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-16.jpg" alt="greenhouse in the yard" width="100%"></div>
+                </div>
+            </div>
+            
+            <!-- <div class="franxa franxa-restauracion verde1"></div> -->
+            <div class="tarifas franxa contenedor-flex verde-claro letra-marron">
                 <div class="contido-tarifas contenedor-flex">
                     <h3>Fees</h3>
                     <p>110€ per day <br> 580€ per week </p>
@@ -262,50 +276,5 @@
         <script src="owlcarousel/owl.carousel.min.js"></script>
         <script src="js/script.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
-        <script>
-            (function () {
-                function logElementEvent(eventName, element) {
-                console.log(Date.now(), eventName, element.getAttribute("src"));
-                }
-
-                var callback_enter = function (element) {
-                logElementEvent("🔑 ENTERED", element);
-                };
-                var callback_exit = function (element) {
-                logElementEvent("🚪 EXITED", element);
-                };
-                var callback_loading = function (element) {
-                logElementEvent("⌚ LOADING", element);
-                };
-                var callback_loaded = function (element) {
-                logElementEvent("👍 LOADED", element);
-                };
-                var callback_error = function (element) {
-                logElementEvent("💀 ERROR", element);
-                element.src =
-                    "https://via.placeholder.com/440x560/?text=Error+Placeholder";
-                };
-                var callback_finish = function () {
-                logElementEvent("✔️ FINISHED", document.documentElement);
-                };
-                var callback_cancel = function (element) {
-                logElementEvent("🔥 CANCEL", element);
-                };
-
-                var ll = new LazyLoad({
-                    threshold: 0,
-                    // Assign the callbacks defined above
-                    callback_enter: callback_enter,
-                    callback_exit: callback_exit,
-                    callback_cancel: callback_cancel,
-                    callback_loading: callback_loading,
-                    callback_loaded: callback_loaded,
-                    callback_error: callback_error,
-                    callback_finish: callback_finish
-                });
-            })();
-        </script>
     </body>  
 </html>    

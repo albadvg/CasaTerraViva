@@ -1,9 +1,15 @@
-/*FONTES*/
-@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Montserrat:wght@100;200;300;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&display=swap');
-
+/*VARIABLES*/
+:root{
+    --verde: rgb(174, 203, 94) ;
+    --verdeEscuro: rgb(60, 63, 46);
+    --verdeClaro: rgb(228, 252, 160);
+    --marron: rgb(44, 35, 24);
+    --amarelo: #f8e973;
+}
+/* rgb(172, 203, 85) */
 
 /*ESTILOS BASE*/
-*{
+*{ 
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
@@ -12,9 +18,13 @@
     line-height: 1.5rem;
     text-decoration: none;   
 }
-
+html{
+    overflow-x: hidden;
+}
 body{
     max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
 }
 
 img{
@@ -30,34 +40,61 @@ summary::-webkit-details-marker {
 sup{
     font-size: .6rem;
 }
+p{
+    color: rgb(66, 61, 55);
+}
+a{
+    color: unset;
+}
+ul{
+    padding: 0;
+}
 
 /*encabezados*/
 h1, h2, h3, h4, h5{
-    font-family: 'Roboto Slab';
-    color: rgb(86, 75, 64);
+    font-family: 'Arbutus Slab';
+    color: rgb(66, 61, 55);
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
+
 h2{
-    font-size: 2rem;
+    font-size: 2.8rem;
     letter-spacing: 1.2pt;
     font-weight: 800;
+    margin-bottom: 3rem;
 }
 h3{
-    font-size: 1.5rem;
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+    line-height: 1;
 }
 h4{
-    font-size: 1.2rem;
-
+    font-size: 1.5rem;
 }
-@media all and (max-width:769px){
+
+@media screen and (max-width:900px){
+    h1{
+        font-size: 3rem;
+    }
     h2{
-        font-size: 1.5rem;
+        font-size: 2.4rem;
+    }
+    h3{
+        font-size: 2.2rem;
+    }
+    h4{
+        font-size: 1.3rem;
+    }
+} 
+@media screen and (max-width:560px){
+    h1{
+        font-size: 2.5rem;
     }
 }
-
 /*carrusel de imaxes (owl-carousel)*/
 .owl-carousel{
     position: relative;
@@ -71,9 +108,15 @@ h4{
     justify-content: space-between;
     align-items: center;
 }
+
 #carousel-rehab .owl-nav,
 #carousel-cursos .owl-nav{
     height: 100%;
+}
+.carousel-estancias .owl-stage-outer,
+.carousel-entorno .owl-stage-outer{
+    border-radius: 10px;
+
 }
 .owl-nav .owl-prev ,
 .owl-nav .owl-next{
@@ -99,7 +142,7 @@ h4{
     margin-top: 10px;
 }
 
-/*CLASES BÁSICAS*/
+/*UTILIDADES*/
 
 .contenedor-flex{
     display: flex;
@@ -114,14 +157,27 @@ h4{
 .franxa-imaxe img{
     display: block;
 }
+.titulo-paxina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+
+}
+.titulo-paxina>h2{
+    margin-bottom: .5rem!important;
+}
 
 /*colores fondo*/
 
 .verde1{
-    background-color: rgb(174, 203, 94);
+    background-color: var(--verde);
+}
+.verde-claro{
+    background-color: rgb(228, 252, 160);
 }
 .marron{
-    background-color: rgb(70, 49, 18);
+    background-color: var(--marron);
 }
 
 /*color letra*/
@@ -133,7 +189,7 @@ h4{
     color: rgb(86, 75, 64);
 }
 .letra-marron2{
-    color:rgb(70, 49, 18);
+    color: var(--marron)!important;
 }
 
 /*franxa xenérica*/
@@ -144,41 +200,43 @@ h4{
     text-align: center;
 }
 
-/*lazy load*/
-.lazy {
-    opacity: .1;
-}
-img:not(.initial) {
-    transition: opacity 1s;
-}
-.initial,
-.loaded,
-.error,
-.entered {
-    opacity: 1;
-}
-img:not([src]) {
-    visibility: hidden;
-}
-
 /*selector idioma*/
 header {
     position: relative;
 }
 .idioma{
     position: absolute;
-    top: 0;
+    top: 30px;
     right: 0;
     margin: 1rem;
+    cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+    .idioma{
+        right: 80px;
+    }
+}
+@media screen and (max-width:560px){
+    .idioma{
+        top: unset;
+        right: 50px;
+    }
+}
+.idioma ul{
+    border: 1px solid white;
 }
 .idioma li {
-    background-color: #a4b856ba;
+    background-color: #a4b8564d;
     list-style: none;
     padding: .4rem .9rem .4rem .6rem;
-    width: 6.5rem;
     justify-content: flex-end;
     align-items: center;
     color: rgb(73, 66, 58)
+}
+@media screen and (max-width: 560px) {
+    .idioma li {
+        font-size: .9rem;
+    }
 }
 .idioma li a{
     color: rgb(73, 66, 58);
@@ -205,53 +263,43 @@ header {
 
 header{
     width: 100%;
-    height: 200px;
-    flex-direction: column;
+    height: 120px;
     justify-content: space-around;
     align-items: center;
     
 }
-/* .inicio header{
-    background-color:rgba(174, 203, 94, 0.516)!important;
-} */
-.cabeceira{
-    padding: 70px 0 50px 0;
+@media screen and (max-width: 1200px) {
+    header{
+        justify-content: flex-start;
+    }
 }
-@media screen and (max-width:900px){
-    .cabeceira {
-        padding: 110px 0 40px 0;
+@media screen and (max-width:560px) {
+    header{
+        height: 90px;
     }
-} 
-@media screen and (max-width:480px){
-    .cabeceira {
-        padding: 100px 0 40px 0;
-    }
+}
+.inicio header{
+    background: #ffffff69!important;
+    position: absolute;
+}
+.cabeceira{
+    margin-left: 2.5rem;
+    margin-top: -1rem;
 }
 .cabeceira h1{
     font-family: 'Fredericka the Great', cursive;    
-    font-size: 5rem;
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;   
 }
-@media screen and (max-width:900px){
-    .cabeceira h1{
-        font-size: 4rem;
-    }
-} 
-@media screen and (max-width:560px){
-    .cabeceira h1{
-        font-size: 3rem;
-    }
-}
-@media screen and (max-width:360px){
-    .cabeceira h1{
-        font-size: 2.3rem;
+@media screen and (max-width:560px) {
+    .cabeceira{
+        margin-left: 1rem;
+        margin-top: -1rem;
     }
 }
 nav{
     max-width: 750px;
-    margin: 0 auto;
-    padding: 0 0 15px 0;
+    margin: 0 100px 0 auto;
 }
 nav ul{
     justify-content: space-around;
@@ -300,13 +348,90 @@ nav .barra-vertical-menu{
     }
 }
 
-nav .menu-seleccionado{
-    color: white;
-}
 nav a:hover{
-    color: white;
+    font-weight: 600;
 }
 
+/*Menu mobil*/
+.menu-hamburguesa {
+    display: none;
+}
+.boton-burguer{
+    font-size: 3rem;
+    color: var(--marron);
+    transition: transform .5s ease;
+    cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+    .menu-escritorio{
+        display: none;
+    }
+    .menu-hamburguesa{
+        display: block;
+        margin-right: 20px;
+        position: absolute;
+        top: 41px;
+        right: 10px;
+        overflow: visible;
+        z-index: 999;
+    }
+
+    .menu-hamburguesa ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        position: absolute;
+        right: -800px;
+        top: -30px;
+        padding: 100px 0px;
+        transition: right 1s ease;
+        z-index: 999;
+        height: 100vh;
+    }
+    .menu-hamburguesa ul.amosar-menu{
+        right: -30px;
+        top: -30px;
+        transition: right 1s ease;  
+    }
+    .menu-hamburguesa li{
+        text-align: center;
+        transition: transform .5s ease;
+        border-bottom: 1px solid var(--lightBlue);
+        width: 60%;
+        padding:  30px 20px ;
+    }
+    .menu-hamburguesa li:hover{
+        transform: scale(1.1);
+    }
+    .boton-aspa{
+        position: absolute;
+        top: 40px;
+        left: 40px;
+        font-size: 1.6rem;
+        font-weight: 100;
+        cursor: pointer;
+        color: var(--marron);
+    }
+}
+@media screen and (max-width:1200px) {
+    .menu-hamburguesa ul{
+        width: 50vw;
+    }
+}
+@media screen and (max-width: 560px) {
+    .menu-hamburguesa {
+        top: unset;
+        right: 0;
+    }
+    .menu-hamburguesa ul{
+        width: 80vw;
+    }
+    .boton-burguer{
+        font-size: 2.4rem;
+    }
+}
 /***FOOTER***/
 
 .contido-footer{
@@ -328,7 +453,7 @@ footer #localizacion, footer #contacto, #menu-footer{
 footer h5{
     font-family: 'Fredericka the Great', cursive;
     color: white;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
 }
 .contido-footer a{
     color: white;
@@ -434,16 +559,13 @@ footer #contacto a{
 }
 .hero img,
 .hero video{
-    max-height: 100vh;
     width: 100%;
+    height: auto;
+    max-height: 100vh;
     object-fit: cover;
-    object-position: 50% 70%;
+    object-position: 50% 40%;
     vertical-align: middle;
 }
-/* .inicio .hero img{
-    margin-top: -200px;
-} */
-
 
 /*sub-header*/
 
@@ -452,7 +574,7 @@ footer #contacto a{
     text-align: center;
     justify-content: center;
     align-items: center;
-    padding: 50px;   
+    padding: 50px 0;   
 }
 .inicio .sub-header div{
     flex-direction: column;
@@ -461,31 +583,34 @@ footer #contacto a{
     width: 40vw;
     font-size: 1.1rem;
     font-weight: 400;
-    line-height: 1.8rem;
+    
 }
 .inicio .sub-header h2{
-    line-height: 2rem;   
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3.5rem;
+    line-height: 4.5rem;   
+    font-weight: 500!important;
+}
+@media screen and (max-width: 900px) {
+    .inicio .sub-header h2{
+        font-size: 3rem;
+    }
 }
 
 .inicio .sub-header p{
     margin-bottom: 10px;
+    font-size: 1.2rem;
+    line-height: 2rem;
 }
 @media all and (max-width:900px){
     .inicio .sub-header div{
         width: 70vw;
     }
 }
-@media all and (max-width:769px){
-    .inicio .sub-header h2{
-        width: 50vw;
-    }
-}
+
 @media all and (max-width:480px){
     .inicio .sub-header div{
         width: 70vw;
-    }
-    .inicio .sub-header h2{
-        width: 50vw;
     }
 }
 
@@ -497,14 +622,19 @@ footer #contacto a{
 }
 .apartado-inicio{
     align-items: center;
-    margin: 50px 0px 10px 0px;
+    margin: 80px 0px 10px 0px;
     gap: 70px;
 }
-.texto-apartado{
-    width: 25vw;
+.apartado-inicio img{
+    width: 30vw;
+    border-radius: 10px;
+    aspect-ratio: 8/6;
 }
-.texto-apartado h2{
-    margin-bottom: 30px;
+.texto-apartado{
+    width: 30vw;
+}
+.texto-apartado h3{
+    margin-bottom: 45px;
 }
 #entorno{
     text-align: right;
@@ -512,21 +642,16 @@ footer #contacto a{
 #cursos{
     margin-bottom: 70px;
 }
-#alojamiento img{
-    width: 20vw;
-}
-#entorno img{
-    width: 25vw;
-}
-#cursos img{
-    width:25vw ;
-}
+
 .ver-mas{
     margin-top: 20px;
 }
-.ver-mas a{
+.ver-mas a:hover{
     font-weight: 600;
-    color:rgb(86, 75, 64);
+}
+.ver-mas a{
+    font-weight: 500;
+    color:rgb(66, 61, 55);
 }
 @media all and (max-width:1200px){
     #alojamiento img{
@@ -582,7 +707,7 @@ footer #contacto a{
 
 /*franxa reservas*/
 #reservas #chaves{
-    width: 70px;
+    width: 65px;
 }
 #reservas .texto{
     width: 500px;
@@ -598,12 +723,11 @@ footer #contacto a{
     line-height: 30px;
     font-weight: 500;
 }
-#reservas a{
-    color: white;   
+#reservas a:hover{
+    font-weight: 700;
 }
-#reservas .texto h2{
-    padding: 3px 0 20px 0px;
-}
+
+
 
 /*******ALOJAMIENTO****************************************************************/
 
@@ -615,7 +739,6 @@ footer #contacto a{
     margin-bottom: 1.5rem;
 }
 .alojamiento .sub-header h2{
-    margin-bottom: 30px;
     margin-top: 10px;
     align-self: flex-start;
 }
@@ -627,20 +750,17 @@ footer #contacto a{
     object-fit: cover;
 }
 .franxa-restauracion{
-    height:50px;
+    height:60px;
 }
 
 /*****/
 
 .casa-hoy{
-    padding: 50px 0 0 0;
+    padding: 70px 0;
     margin-top: -10px;
     align-items: center;
 }
 
-.casa-hoy h2{
-    margin-bottom: 30px;
-}
 
 .casa-hoy p{
     width: 60vw;
@@ -671,7 +791,7 @@ footer #contacto a{
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-around;
-    padding: 2vw 0 3vw 0;
+    padding: 0 0 3vw 0;
 }
 
 @media screen and (max-width: 748px){
@@ -736,7 +856,6 @@ footer #contacto a{
 /*franxa tarifas alojamiento*/
 
 .contido-tarifas{
-    height: 200px;
     width: 500px;
     flex-direction: column;
     justify-content: space-around;
@@ -753,7 +872,7 @@ footer #contacto a{
 /*******CURSOS***********************************************************************/
 
 .texto-cursos{
-    margin: 50px 0 55px 0;
+    margin: 0px 0 55px 0;
     flex-direction: column;
     text-align: left;
 }
@@ -788,7 +907,7 @@ footer #contacto a{
 }
 .cursos summary{
     cursor: pointer;
-    background-color: rgb(227, 250, 142);
+    background-color: var(--verdeClaro);
     padding: 7px;   
     position: relative;
     text-align: center;
@@ -811,7 +930,7 @@ details[open] summary::before {
     padding-top: 20px;
     justify-content: space-between;
 }
-#cabecera-programa, #cabecera-fechas{
+.cabecera-programa, .cabecera-fechas{
     display: block;
     background-color:rgba(227, 250, 142, 0.687) ;
     padding: 7px 0 3px 30px;
@@ -845,14 +964,18 @@ details[open] summary::before {
     color:rgb(86, 75, 64);
     margin-right: 1.2rem;
 }
-.dia-completo{
-    text-decoration: line-through;
+.cursos details #fechas ul li.completo{
+    margin-bottom: 20px;
+}
+.cursos details #fechas ul li>span{
+    position: relative;
 }
 .palabra-completo{
+    position: absolute;
+    top: 19px;
+    left: 0;
     display: block;
     color: red;
-    margin-top: -10px;
-    margin-left: 12px;
 }
 @media screen and (max-width: 900px){
     .texto-cursos{
@@ -870,24 +993,17 @@ details[open] summary::before {
         margin-top: 35px;
     }
 }
-@media screen and (max-width: 560px){
-    .cursos summary h3{
-        font-size: 1.3rem;
-    }
-}
+
 @media screen and (max-width: 480px){
-    .cursos summary h3{
-        font-size: 1.1rem;
-    }
     .cursos summary::before{
         transform:scale(80%);
         left:10px;
     }
+    .cursos summary h4{
+        margin-left: 1.8rem;
+    }
 }
 @media screen and (max-width: 390px){
-    .cursos summary h3{
-        font-size: 1rem;
-    }
     .cursos summary::before{
         transform:scale(65%);
         left:8px;
@@ -910,10 +1026,16 @@ details[open] summary::before {
 .actividades{
     justify-content: space-around;
     margin-top: 40px;
+    margin: 0 auto;
+}
+@media screen and (min-width: 1200px){
+    .actividades{
+        width: 80vw;
+    }
 }
 .actividade{
     flex: 0 0 30%;
-    padding: 3vw;
+    padding: 0 3vw 6vw 3vw;
     text-align: center;
 }
 .actividade h3{
@@ -974,7 +1096,6 @@ details[open] summary::before {
     display: none;
 }
 .como-llegar-texto{
-    color: white;
     flex-direction: column;
     justify-content: space-evenly;
 }
@@ -982,11 +1103,10 @@ details[open] summary::before {
     margin-top: 10px;
 }
 .como-llegar-texto p{
-    font-weight: 500;
+    font-weight: 400;
 }
 .como-llegar-texto h2{
     font-weight: 600;
-    margin-bottom: 20px;
     color: white;
 }
 .como-llegar-texto h4{
@@ -1044,11 +1164,12 @@ details[open] summary::before {
     margin: 0 auto;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 5vw;
+    padding: 0 5vw 5vw 5vw;
 }
 .sobre-mi img{
     width: 45%;
     height: 45%;
+    border-radius: 10px;
 }
 .contenedor-sobre-mi p{
     width: 45%;
@@ -1098,13 +1219,14 @@ details[open] summary::before {
 .reservas-contido img{
     width: 300px;
     margin: 30px 0 30px 0;
+    border-radius: 10px;
 }
 .reservas-contido>div{
     margin: 30px;
     background-color: rgba(255, 255, 255, 0.541);
     padding: 20px;
 }
-.reservas-contido div>*{
+.reservas-contido div>*:not(h2){
     color: black;
     font-size: 1.1rem;
     font-weight: 400;

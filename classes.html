@@ -8,11 +8,13 @@
 
         <title>Casa Terra Viva - Wine tasting</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&text=Casa%20Terra%20Viva&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&family=Arbutus+Slab&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-
         <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="owlcarousel/assets/owl.theme.default.css">
-
         <link rel="stylesheet" href="css/style.css">
 
         <script src="https://kit.fontawesome.com/db814f4489.js" crossorigin="anonymous"></script>
@@ -22,14 +24,14 @@
         <header class="contenedor-flex verde1">
             <div class="idioma">
                 <ul>
-                    <li><i class="fas fa-angle-right"></i>English</li>
-                    <li class="oculto"><a href="cursos.html">Español</a></li>
+                    <li><i class="fas fa-angle-right"></i>EN</li>
+                    <li class="oculto"><a href="cursos.html">ES</a></li>
                 </ul>
             </div>
             <div class="cabeceira">
                 <a href="en/index.html"><h1>Casa Terra Viva</h1></a>
             </div>
-            <nav>
+            <nav class="menu-escritorio">
                 <ul class="contenedor-flex">
                     <li><a href="en/index.html" >HOME</a> </li>
                     <li class="barra-vertical-menu">|</li>
@@ -43,21 +45,26 @@
                     <li class="barra-vertical-menu">|</li>
                     <li><a href="reservations.html">RESERVATIONS</a></li>
                 </ul>
-            </nav>            
+            </nav>  
+            <nav class="menu-hamburguesa">
+                <i class="bi bi-list boton-burguer"></i>
+                <ul>
+                    <i class="bi bi-x-lg boton-aspa"></i>
+                    <li><a href="en/index.html">HOME</a> </li>
+                    <li><a href="alojamiento.html">ACCOMMODATIONS</a> </li>
+                    <li><a href="cursos.html" class="menu-seleccionado bold">WINE TASTING</a></li>
+                    <li><a href="entorno.html">SURROUNDINGS</a></li>
+                    <li><a href="sobre-mi.html">ABOUT</a></li>
+                    <li><a href="reservas.html">RESERVATIONS</a></li>
+                </ul>
+            </nav>           
         </header>
 
         <main>
-            <div class="container">
-                <div class="owl-carousel owl-theme " id="carousel-cursos">
-                    <img src="img/cursos-cata-1.jpg" alt="tables ready for wine tasting course" width="100%">
-                    <img src="img/cursos-cata-2.jpg" alt="wine tasting poster" width="100%">
-                    <img src="img/cursos-cata-3.jpg" alt="Bibiana teaching course" width="100%">                    
-                    <img src="img/cursos-cata-4.jpg" alt="participants of wine tasting course" width="100%">
-                    <img src="img/cursos-cata-5.jpg" alt="table with glasses and aroma wheel" width="100%">
-                    <img src="img/cursos-cata-6.jpg" alt="participants with wine glass" width="100%">
-                    
-                </div>
+            <div class="titulo-paxina">
+                <h2>Wine Tasting</h2>
             </div>
+            
             <div class="franxa texto-cursos contenedor-flex">
                 <div>
                     <p>
@@ -69,6 +76,7 @@
                             <li>familiarize ourselves with different wines so we can decide which we like best.</li>
                     </ul>
                 </div>
+                
                 <div>
                     <p> 
                         Wine tasting classes are open to everyone, regardless of whether they are staying at the house. 
@@ -88,35 +96,51 @@
 
                 <details>
                     <summary>
-                        <h3 class="letra-marron">MODULE 1 : Galician White Wines</h3>
+                        <h4 class="letra-marron">MODULE 1 : Galician White Wines</h4>
                     </summary>
                     <div class="contenedor-flex">
                         <div id="programa">
-                            <span>CONTENTS</span>
-                            <ol>
-                                <li>How to describe wine: The aroma wheel</li>
-                                <li>Tasting games: "Inverse tasting"</li>
-                                <li>Knowing the facts to enhance our enjoyment: The Galician D.O.s</li>
-                                <li>Hedonic and descriptive tastings of three representative Galician wines</li>
-                            </ol>
+                            <span class="cabecera-programa">CONTENTS</span>
+                            <div id="contenedor-programa">
+                                <ol>
+                                    <li>How to describe wine: The aroma wheel</li>
+                                    <li>Tasting games: "Inverse tasting"</li>
+                                    <li>Knowing the facts to enhance our enjoyment: The Galician D.O.s</li>
+                                    <li>Hedonic and descriptive tastings of three representative Galician wines</li>
+                                </ol>
+                            </div>          
                         </div>
                         <div id="fechas">
-                            <span>DATES</span>
-                            <ul>
-                                <li>Saturday, April 29th, 6:30 pm</li>
-                                <li>Saturday, May 27th, 6:30 pm</li>
-                                <li>Saturday, June 24th, 6:30 pm</li>
-                                <li>Saturday, July 29th, 6:30 pm</li>
-                            </ul>
+                            <span class="cabecera-fechas">DATES</span>
+                            <div id="contenedor-fechas">
+                                <ul>
+                                    <li>Saturday, April 29th, 6:30 pm</li>
+                                    <li class="completo">Saturday, <span> May 27th, 6:30 pm <span class="palabra-completo">Sold out</span></span></li>
+                                    <li>Saturday, June 24th, 6:30 pm</li>
+                                    <li>Saturday, July 29th, 6:30 pm</li>
+                                </ul>
+                            </div>
+                            
                         </div>
                     </div>
                 </details>
 
-            </div>          
+            </div> 
+            <div class="container">
+                <div class="owl-carousel owl-theme " id="carousel-cursos">
+                    <img src="img/cursos-cata-1.jpg" alt="tables ready for wine tasting course" width="100%">
+                    <img src="img/cursos-cata-2.jpg" alt="wine tasting poster" width="100%">
+                    <img src="img/cursos-cata-3.jpg" alt="Bibiana teaching course" width="100%">                    
+                    <img src="img/cursos-cata-4.jpg" alt="participants of wine tasting course" width="100%">
+                    <img src="img/cursos-cata-5.jpg" alt="table with glasses and aroma wheel" width="100%">
+                    <img src="img/cursos-cata-6.jpg" alt="participants with wine glass" width="100%">
+                    
+                </div>
+            </div>         
 
-            <div class="tarifas franxa contenedor-flex verde1 letra-marron">
+            <div class="tarifas franxa contenedor-flex verde-claro letra-marron">
                 <div class="contido-tarifas contenedor-flex ">
-                    <h3>Fee</h3>
+                    <h3>Fees</h3>
                     <p>2-3 people: 45€<br> 
                        4-8 people: 30€ <br>
                        (per person, includes wines) </p>

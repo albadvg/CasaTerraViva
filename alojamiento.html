@@ -7,6 +7,10 @@
         <meta name="description" content="El alojamiento, de 81 m2, conforma una vivienda completa en el ala este de una extensa casa de labranza. La vivienda es independiente del resto de la casa y tiene entrada privada tanto a la casa como a la finca. La presencia de antiguos arados, no sólo de hierro sinó también de madera, así como los instrumentos de tejer el lino, son testimonio de una antigüedad de más de 180 años.">
         <title>Casa Terra Viva - Alojamiento</title>
 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&text=Casa%20Terra%20Viva&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&family=Roboto+Slab:wght@300;400;500;600;800&family=Arbutus+Slab&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     
         <link rel="stylesheet" href="owlcarousel/assets/owl.carousel.min.css">
@@ -21,14 +25,14 @@
         <header class="contenedor-flex verde1">
             <div class="idioma">
                 <ul>
-                    <li><i class="fas fa-angle-right"></i>Español</li>
-                    <li class="oculto"><a href="accommodations.html">English</a></li>
+                    <li><i class="fas fa-angle-right"></i>ES</li>
+                    <li class="oculto"><a href="accommodations.html">EN</a></li>
                 </ul>
             </div>
             <div class="cabeceira">
                 <a href="index.html"><h1>Casa Terra Viva</h1></a>
             </div>
-            <nav>
+            <nav class="menu-escritorio">
                 <ul class="contenedor-flex">
                     <li><a href="index.html">INICIO</a> </li>
                     <li class="barra-vertical-menu">|</li>
@@ -42,51 +46,26 @@
                     <li class="barra-vertical-menu">|</li>
                     <li><a href="reservas.html">RESERVAS</a></li>
                 </ul>
-            </nav>            
+            </nav> 
+            <nav class="menu-hamburguesa">
+                <i class="bi bi-list boton-burguer"></i>
+                <ul>
+                    <i class="bi bi-x-lg boton-aspa"></i>
+                    <li><a href="index.html">INICIO</a> </li>
+                    <li><a href="alojamiento.html" class="menu-seleccionado bold">ALOJAMIENTO</a> </li>
+                    <li><a href="cursos.html">CURSOS DE CATA</a></li>
+                    <li><a href="entorno.html">ENTORNO</a></li>
+                    <li><a href="sobre-mi.html">SOBRE MI</a></li>
+                    <li><a href="reservas.html">RESERVAS</a></li>
+                </ul>
+            </nav>           
         </header>
 
         <main>
-            <div class="hero">
-                <video  controls>
-                    <source src="video/video-aereo-cut.mp4" type="video/mp4">
-                </video>
+            <div class="titulo-paxina">
+                <h2>Alojamiento</h2>
             </div>
-
-            <div class="sub-header contenedor-flex verde1 letra-blanca">
-                <div>
-                    <h2 class="letra-blanca">La rehabilitación</h2>
-                    <p> Esta galería recoge 5 años de rehabilación protagonizados por
-                        muchos profesionales y amigos/as<br> - una tarea que me resultó ilusionante
-                        o abrumadora dependiendo del dia o la hora. <br>Ojalá que estas fotos
-                        sirvan para celebrar el talento y la generosidad de todas estas personas <br>
-                        y para darles las gracias desde el fondo de mi corazón.
-                    </p>
-                </div>
-      
-            </div>
-
-            <div class="container">
-                <div class="owl-carousel owl-theme verde1" id="carousel-rehab">
-                    <div class=""><img src="img/restauracion-casa-1.jpg" alt="casa con maleza" width="100%" ></div>
-                    <div class=""><img src="img/restauracion-casa-2.jpg" alt="amiga ayudando con obras" width="100%" ></div>
-                    <div class=""><img src="img/restauracion-casa-5.jpg" alt="quemando maleza" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-3.jpg" alt="tractor en la finca" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-4.jpg" alt="tractor arando" width="100%" ></div>
-                    <div class=""><img src="img/restauracion-casa-7.jpg" alt="amigas con puerta restaurada" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-8.jpg" alt="habitación en estado original" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-9.jpg" alt="obrero colocando el tejado" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-6.jpg" alt="obrero colocando baldosa" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-10.jpg" alt="amiga pintando habitación" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-11.jpg" alt="aislamiento de la casa" width="100%"></div>                   
-                    <div class=""><img src="img/restauracion-casa-12.jpg" alt="tractor moviendo piedras" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-13.jpg" alt="amigos sachando en la finca" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-14.jpg" alt="manzanos recién plantados" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-15.jpg" alt="retocando marco de puerta" width="100%"></div>
-                    <div class=""><img src="img/restauracion-casa-16.jpg" alt="invernadero en la finca" width="100%"></div>
-                </div>
-            </div>
-            
-            <div class="franxa franxa-restauracion verde1"></div>
+           
             
             <div class="tarxetas contenedor-flex">
                 <div class="tarxeta">
@@ -197,10 +176,9 @@
                 </div>
                 
             </div>
-
-            <div class="contenedor-flex verde1  casa-hoy flex-column">
-                <h2 class="letra-blanca">La casa hoy en día</h2>
-                <p class="letra-blanca"> El alojamiento, de 81 m<sup>2</sup>, conforma una vivienda completa en el ala este
+            <div class="contenedor-flex verde-claro  casa-hoy flex-column">
+                <h3 >La casa hoy en día</h3>
+                <p > El alojamiento, de 81 m<sup>2</sup>, conforma una vivienda completa en el ala este
                     de una extensa casa de labranza. La vivienda es independiente del resto de la casa y tiene 
                     entrada privada tanto a la casa como a la finca.
                     La presencia de antiguos arados, no sólo de hierro sinó también de madera, 
@@ -210,8 +188,44 @@
                     con barbacoa de gas de uso exclusivo y una finca de 400 m<sup>2</sup>, también de uso exclusivo. 
                 </p>
             </div>
+            <div class="sub-header contenedor-flex verde1 letra-blanca">
+                <div>
+                    <h3 class="letra-blanca">La rehabilitación</h3>
+                    <p class="letra-blanca"> Esta galería recoge 5 años de rehabilación protagonizados por
+                        muchos profesionales y amigos/as<br> - una tarea que me resultó ilusionante
+                        o abrumadora dependiendo del dia o la hora. <br>Ojalá que estas fotos
+                        sirvan para celebrar el talento y la generosidad de todas estas personas <br>
+                        y para darles las gracias desde el fondo de mi corazón.
+                    </p>
+                </div>
+      
+            </div>
 
-            <div class="tarifas franxa contenedor-flex verde1 letra-marron">
+            <div class="container">
+                <div class="owl-carousel owl-theme verde1" id="carousel-rehab">
+                    <div class=""><img src="img/restauracion-casa-1.jpg" alt="casa con maleza" width="100%" ></div>
+                    <div class=""><img src="img/restauracion-casa-2.jpg" alt="amiga ayudando con obras" width="100%" ></div>
+                    <div class=""><img src="img/restauracion-casa-5.jpg" alt="quemando maleza" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-3.jpg" alt="tractor en la finca" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-4.jpg" alt="tractor arando" width="100%" ></div>
+                    <div class=""><img src="img/restauracion-casa-7.jpg" alt="amigas con puerta restaurada" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-8.jpg" alt="habitación en estado original" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-9.jpg" alt="obrero colocando el tejado" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-6.jpg" alt="obrero colocando baldosa" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-10.jpg" alt="amiga pintando habitación" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-11.jpg" alt="aislamiento de la casa" width="100%"></div>                   
+                    <div class=""><img src="img/restauracion-casa-12.jpg" alt="tractor moviendo piedras" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-13.jpg" alt="amigos sachando en la finca" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-14.jpg" alt="manzanos recién plantados" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-15.jpg" alt="retocando marco de puerta" width="100%"></div>
+                    <div class=""><img src="img/restauracion-casa-16.jpg" alt="invernadero en la finca" width="100%"></div>
+                </div>
+            </div>
+            
+            <div class="franxa franxa-restauracion verde1"></div>
+            
+
+            <div class="tarifas franxa contenedor-flex verde-claro letra-marron">
                 <div class="contido-tarifas contenedor-flex ">
                     <h3>Tarifas</h3>
                     <p>110€ por día <br> 580€ por semana </p>
@@ -264,50 +278,5 @@
         <script src="owlcarousel/owl.carousel.min.js"></script>
         <script src="js/script.js"></script>
 
-        <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.4.0/dist/lazyload.min.js"></script>
-        <script>
-            (function () {
-                function logElementEvent(eventName, element) {
-                console.log(Date.now(), eventName, element.getAttribute("src"));
-                }
-
-                var callback_enter = function (element) {
-                logElementEvent("🔑 ENTERED", element);
-                };
-                var callback_exit = function (element) {
-                logElementEvent("🚪 EXITED", element);
-                };
-                var callback_loading = function (element) {
-                logElementEvent("⌚ LOADING", element);
-                };
-                var callback_loaded = function (element) {
-                logElementEvent("👍 LOADED", element);
-                };
-                var callback_error = function (element) {
-                logElementEvent("💀 ERROR", element);
-                element.src =
-                    "https://via.placeholder.com/440x560/?text=Error+Placeholder";
-                };
-                var callback_finish = function () {
-                logElementEvent("✔️ FINISHED", document.documentElement);
-                };
-                var callback_cancel = function (element) {
-                logElementEvent("🔥 CANCEL", element);
-                };
-
-                var ll = new LazyLoad({
-                    threshold: 0,
-                    // Assign the callbacks defined above
-                    callback_enter: callback_enter,
-                    callback_exit: callback_exit,
-                    callback_cancel: callback_cancel,
-                    callback_loading: callback_loading,
-                    callback_loaded: callback_loaded,
-                    callback_error: callback_error,
-                    callback_finish: callback_finish
-                });
-            })();
-        </script>
     </body>  
 </html>    
