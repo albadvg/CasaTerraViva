@@ -2,7 +2,7 @@
 :root{
     --verde: rgb(174, 203, 94) ;
     --verdeEscuro: rgb(60, 63, 46);
-    --verdeClaro: rgb(228, 252, 160);
+    --verdeClaro: rgb(234, 255, 177);
     --marron: rgb(44, 35, 24);
     --amarelo: #f8e973;
 }
@@ -92,8 +92,10 @@ h4{
 } 
 @media screen and (max-width:560px){
     h1{
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
+    h2{
+        font-size: 2rem ;    }
 }
 /*carrusel de imaxes (owl-carousel)*/
 .owl-carousel{
@@ -174,7 +176,7 @@ h4{
     background-color: var(--verde);
 }
 .verde-claro{
-    background-color: rgb(228, 252, 160);
+    background-color: var(--verdeClaro);
 }
 .marron{
     background-color: var(--marron);
@@ -218,7 +220,7 @@ header {
 }
 @media screen and (max-width:560px){
     .idioma{
-        top: unset;
+        top: 11px;
         right: 50px;
     }
 }
@@ -426,7 +428,8 @@ nav a:hover{
         right: 0;
     }
     .menu-hamburguesa ul{
-        width: 80vw;
+        width: 90vw;
+        height: 90vh;
     }
     .boton-burguer{
         font-size: 2.4rem;
@@ -548,7 +551,6 @@ footer #contacto a{
     font-size: .7rem;
 }
 .credito-deseño a{
-    color: rgb(211, 204, 186);
     margin-left: .4rem;
 }
 
@@ -566,7 +568,12 @@ footer #contacto a{
     object-position: 50% 40%;
     vertical-align: middle;
 }
-
+@media screen and (max-width: 560px ) and (orientation: portrait) {
+    .hero img{
+        height: 80vh;
+        object-position: 40% 40%;
+    }
+}
 /*sub-header*/
 
 .sub-header{
@@ -689,7 +696,7 @@ footer #contacto a{
         gap: 30px;
     }
     .texto-apartado{
-        width: 70vw;
+        width: 80vw;
         
     }
     #entorno .texto-apartado{
@@ -697,7 +704,7 @@ footer #contacto a{
     }
 
     #alojamiento img, #entorno img, #cursos img{
-        width: 70vw;
+        width: 80vw;
     }
     
     .ver-mas{
@@ -794,11 +801,6 @@ footer #contacto a{
     padding: 0 0 3vw 0;
 }
 
-@media screen and (max-width: 748px){
-    .tarxetas{
-        padding: 8vw 0 4vw 0;
-    }
-}
 .tarxeta{
     padding: 3vw;
     flex: 0 0 32%;
@@ -818,13 +820,13 @@ footer #contacto a{
 .lavanderia .owl-item {
     background-color: rgba(174, 203, 94, 0.33);
 }
-@media all and (max-width:1200px){
+@media screen and (max-width:1200px){
     .carousel-estancias{
         width: 40vw;
     }  
 
 }
-@media all and (max-width:769px){
+@media screen and (max-width:769px){
     .texto-tarxeta{
         margin: 0 auto;
     }
@@ -837,6 +839,9 @@ footer #contacto a{
     }
 }
 @media all and (max-width:560px){
+    .tarxeta{
+        margin-bottom: 1.5rem;
+    }
     .tarxeta:nth-child(5){
         margin-bottom: 35px;
     }
@@ -979,7 +984,7 @@ details[open] summary::before {
 }
 @media screen and (max-width: 900px){
     .texto-cursos{
-        margin: 40px 0 25px 0; ;
+        margin: 0 0 25px 0; ;
     }
     .texto-cursos>*,
     .ingles .texto-cursos>*{
@@ -1081,15 +1086,15 @@ details[open] summary::before {
 /*sección Cómo llegar*/
 
 .como-llegar .seccion-der{
-    /* height: 400px; */
     flex-grow: 1;
     justify-content: space-around;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
 }
 .como-llegar #camiño img{
-    height: 400px;
-    width: auto;
+    width: 500px;
+    height: 100%;
+    object-fit: cover;
     display:block;   
 }
 .como-llegar #franxa img{
@@ -1114,12 +1119,9 @@ details[open] summary::before {
     font-weight: 500;
 }
 .mapa{
-    height: 300px;
-    background-color: rgb(28, 29, 22);
-}
-.mapa iframe{
-    height: 300px;
+    height: 100%;
     width: 25vw;
+    background-color: rgb(28, 29, 22);
 }
 @media screen and (max-width:1300px){
     .como-llegar .seccion-der{
@@ -1133,7 +1135,7 @@ details[open] summary::before {
         height: auto;
         width: 100%;
     }
-    .mapa iframe{
+    .mapa {
         height: 300px;
         width: 40vw;
     }
@@ -1188,10 +1190,6 @@ details[open] summary::before {
     .contenedor-sobre-mi{
         flex-direction: column;
         align-items: center;
-    }
-    .sobre-mi img{
-    
-        margin-top: 30px;
     }
     .contenedor-sobre-mi p{
         width: 80vw;
