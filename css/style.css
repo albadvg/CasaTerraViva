@@ -1087,9 +1087,8 @@ details[open] summary::before {
 
 .como-llegar .seccion-der{
     flex-grow: 1;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px;
 }
 .como-llegar #camiño img{
     width: 500px;
@@ -1103,6 +1102,7 @@ details[open] summary::before {
 .como-llegar-texto{
     flex-direction: column;
     justify-content: space-evenly;
+    padding: 2rem;
 }
 .como-llegar-texto div{
     margin-top: 10px;
@@ -1118,9 +1118,9 @@ details[open] summary::before {
     margin-bottom: 10px;
     font-weight: 500;
 }
-.mapa{
+#mapa{
     height: 100%;
-    width: 25vw;
+    width: 30vw;
     background-color: rgb(28, 29, 22);
 }
 @media screen and (max-width:1300px){
@@ -1135,9 +1135,8 @@ details[open] summary::before {
         height: auto;
         width: 100%;
     }
-    .mapa {
-        height: 300px;
-        width: 40vw;
+    #mapa {
+        width: 50vw;
     }
 }
 @media screen and (max-width:900px){
@@ -1147,12 +1146,8 @@ details[open] summary::before {
     .como-llegar #franxa img{
         display: none
     }
-    .mapa iframe{
-        height: 300px;
+    #mapa{
         width: 100vw;
-    }
-    .como-llegar-texto{
-        padding:40px;
     }
     .como-llegar .seccion-der{
         padding: 0;

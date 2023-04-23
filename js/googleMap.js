@@ -1,10 +1,11 @@
 function initMap() { 
-    let address = {lat:42.75724976721994 , lng: 8.512463390431039};
-    let map = new google.maps.Map( document.getElementsByClassName('map') , {
-        zoom : 13,
+    let address = {lat: 42.75710637041434, lng: -8.512646167944864};
+    let map = new google.maps.Map( document.getElementById('mapa') , {
+        zoom : 10,
         center : address,
         mapId : 'e40cc7d0800b02c8',
     });
+  
 
     const pinViewStyles = new google.maps.marker.PinView({
     background: "#2c2318",
@@ -19,4 +20,7 @@ function initMap() {
     map : map,
     content : pinViewStyles.element,
     });
+
+    
+      
 };
