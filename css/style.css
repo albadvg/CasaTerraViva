@@ -1,12 +1,10 @@
 /*VARIABLES*/
 :root{
-    --verde: rgb(174, 203, 94) ;
-    --verdeEscuro: rgb(60, 63, 46);
-    --verdeClaro: rgb(234, 255, 177);
-    --marron: rgb(44, 35, 24);
-    --amarelo: #f8e973;
+    --verde: rgb(174, 203, 94) ; /*principal*/
+    --verdeClaro: rgb(234, 255, 177); /*secundario*/
+    --grisCalido: rgb(66, 61, 55); /*texto*/
+    --marron: rgb(44, 35, 24); /*footer*/
 }
-/* rgb(172, 203, 85) */
 
 /*ESTILOS BASE*/
 *{ 
@@ -26,7 +24,6 @@ body{
     overflow-x: hidden;
     position: relative;
 }
-
 img{
     width: 100%;
     height: auto;
@@ -41,7 +38,7 @@ sup{
     font-size: .6rem;
 }
 p{
-    color: rgb(66, 61, 55);
+    color: var(--grisCalido);
 }
 a{
     color: unset;
@@ -50,16 +47,65 @@ ul{
     padding: 0;
 }
 
-/*encabezados*/
-h1, h2, h3, h4, h5{
-    font-family: 'Arbutus Slab';
-    color: rgb(66, 61, 55);
+/*UTILIDADES*/
+.contenedor-flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column{
+    flex-direction: column;
+}
+.bold{
+    font-weight: 600;
+}
+.franxa-imaxe img{
+    display: block;
+}
+.titulo-paxina{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+}
+.titulo-paxina>h2{
+    margin-bottom: .5rem!important;
 }
 
+/*colores fondo*/
+.fondo-verde{
+    background-color: var(--verde);
+}
+.fondo-verde-clr{
+    background-color: var(--verdeClaro);
+}
+.fondo-marron{
+    background-color: var(--marron);
+}
+
+/*color letra*/
+.letra-blanca{
+    color: white;
+}
+.letra-marron{
+    color: var(--marron)!important;
+}
+
+/*franxa xenérica*/
+.franxa{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/*ENCABEZADOS*/
+h1, h2, h3, h4, h5{
+    font-family: 'Arbutus Slab';
+    color: var(--grisCalido);
+}
 h1{
     font-size: 3.5rem;
 }
-
 h2{
     font-size: 2.8rem;
     letter-spacing: 1.2pt;
@@ -95,9 +141,14 @@ h4{
         font-size: 2.2rem;
     }
     h2{
-        font-size: 2rem ;    }
+        font-size: 2.2rem ;   
+    }
+    h3{
+        font-size: 2rem;
+    }
 }
-/*carrusel de imaxes (owl-carousel)*/
+
+/*CARRUSEL IMAXES (owl-carousel)*/
 .owl-carousel{
     position: relative;
 }
@@ -110,7 +161,6 @@ h4{
     justify-content: space-between;
     align-items: center;
 }
-
 #carousel-rehab .owl-nav,
 #carousel-cursos .owl-nav{
     height: 100%;
@@ -136,7 +186,6 @@ h4{
 .owl-theme .owl-nav [class*="owl-"]:hover{
     background: rgba(255, 255, 255, 0.699);
 }
-
 .owl-theme .owl-nav [class*='owl-']:hover{
     background: rgba(29, 27, 25, 0.322);
 }
@@ -144,124 +193,7 @@ h4{
     margin-top: 10px;
 }
 
-/*UTILIDADES*/
-
-.contenedor-flex{
-    display: flex;
-    flex-wrap: wrap;
-}
-.flex-column{
-    flex-direction: column;
-}
-.bold{
-    font-weight: 600;
-}
-.franxa-imaxe img{
-    display: block;
-}
-.titulo-paxina{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10rem;
-
-}
-.titulo-paxina>h2{
-    margin-bottom: .5rem!important;
-}
-
-/*colores fondo*/
-
-.verde1{
-    background-color: var(--verde);
-}
-.verde-claro{
-    background-color: var(--verdeClaro);
-}
-.marron{
-    background-color: var(--marron);
-}
-
-/*color letra*/
-
-.letra-blanca{
-    color: white;
-}
-.letra-marron{
-    color: rgb(86, 75, 64);
-}
-.letra-marron2{
-    color: var(--marron)!important;
-}
-
-/*franxa xenérica*/
-.franxa{
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-/*selector idioma*/
-header {
-    position: relative;
-}
-.idioma{
-    position: absolute;
-    top: 30px;
-    right: 0;
-    margin: 1rem;
-    cursor: pointer;
-}
-@media screen and (max-width: 1200px) {
-    .idioma{
-        right: 80px;
-    }
-}
-@media screen and (max-width:560px){
-    .idioma{
-        top: 11px;
-        right: 50px;
-    }
-}
-.idioma ul{
-    border: 1px solid white;
-}
-.idioma li {
-    background-color: #a4b8564d;
-    list-style: none;
-    padding: .4rem .9rem .4rem .6rem;
-    justify-content: flex-end;
-    align-items: center;
-    color: rgb(73, 66, 58)
-}
-@media screen and (max-width: 560px) {
-    .idioma li {
-        font-size: .9rem;
-    }
-}
-.idioma li a{
-    color: rgb(73, 66, 58);
-}
-.idioma li:nth-child(1){
-    display: flex;
-}
-.idioma ul i{
-    margin-right: .5rem;
-    transition: rotate .3s;
-}
-.idioma ul .rotar{
-    rotate: 90deg;   
-}
-.idioma .visible{
-    display: flex;
-}
-.idioma .oculto{
-    display: none;
-}
-
-
-/*NAVEGACIÓN*/
+/**************HEADER****************/
 
 header{
     width: 100%;
@@ -313,7 +245,7 @@ nav li{
     margin-top: 5px;
 }
 nav li  a{   
-    color: rgb(73, 66, 58);
+    color: var(--grisCalido);
     padding: 8px;
     font-size: .95rem;
 }
@@ -325,7 +257,7 @@ nav li  a{
 nav .barra-vertical-menu{
     font-size:2rem ;
     font-weight: 200;
-    color: rgb(86, 75, 64);
+    color: var(--grisCalido);
     transform: translateY(-3px);
 }
 @media screen and (max-width: 724px) {
@@ -352,6 +284,64 @@ nav .barra-vertical-menu{
 
 nav a:hover{
     font-weight: 600;
+}
+
+/*selector idioma*/
+header {
+    position: relative;
+}
+.idioma{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+    .idioma{
+        right: 80px;
+    }
+}
+@media screen and (max-width:560px){
+    .idioma{
+        top: 11px;
+        right: 50px;
+    }
+}
+.idioma ul{
+    border: 1px solid white;
+}
+.idioma li {
+    background-color: #a4b8564d;
+    list-style: none;
+    padding: .4rem .9rem .4rem .6rem;
+    justify-content: flex-end;
+    align-items: center;
+    color: var(--grisCalido);
+}
+@media screen and (max-width: 560px) {
+    .idioma li {
+        font-size: .9rem;
+    }
+}
+.idioma li a{
+    color: var(--grisCalido);
+}
+.idioma li:nth-child(1){
+    display: flex;
+}
+.idioma ul i{
+    margin-right: .5rem;
+    transition: rotate .3s;
+}
+.idioma ul .rotar{
+    rotate: 90deg;   
+}
+.idioma .visible{
+    display: flex;
+}
+.idioma .oculto{
+    display: none;
 }
 
 /*Menu mobil*/
@@ -383,7 +373,7 @@ nav a:hover{
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: white;
+        background-color: var(--verdeClaro);
         position: absolute;
         right: -800px;
         top: -30px;
@@ -429,13 +419,14 @@ nav a:hover{
     }
     .menu-hamburguesa ul{
         width: 90vw;
-        height: 90vh;
+        height: 95vh;
     }
     .boton-burguer{
         font-size: 2.4rem;
     }
 }
-/***FOOTER***/
+
+/***********************FOOTER*******************/
 
 .contido-footer{
     width: 100%;  
@@ -554,7 +545,7 @@ footer #contacto a{
     margin-left: .4rem;
 }
 
-/**********INICIO***********************************************************/
+/*********************INICIO********************************/
 
 .hero{
     width: 100%;
@@ -574,8 +565,8 @@ footer #contacto a{
         object-position: 40% 40%;
     }
 }
-/*sub-header*/
 
+/*sub-header*/
 .sub-header{
     width: 100%;
     text-align: center;
@@ -600,7 +591,7 @@ footer #contacto a{
 }
 @media screen and (max-width: 900px) {
     .inicio .sub-header h2{
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 }
 
@@ -658,7 +649,7 @@ footer #contacto a{
 }
 .ver-mas a{
     font-weight: 500;
-    color:rgb(66, 61, 55);
+    color:var(--grisCalido);
 }
 @media all and (max-width:1200px){
     #alojamiento img{
@@ -718,7 +709,6 @@ footer #contacto a{
 }
 #reservas .texto{
     width: 500px;
-    color: rgb(61, 60, 60);
     padding: 35px 0 45px 0;
 }
 #reservas .texto .contenedor-flex{
@@ -736,7 +726,7 @@ footer #contacto a{
 
 
 
-/*******ALOJAMIENTO****************************************************************/
+/*******************************ALOJAMIENTO********************************/
 
 .alojamiento .sub-header{
     flex-direction: column;
@@ -760,7 +750,7 @@ footer #contacto a{
     height:60px;
 }
 
-/*****/
+/**Sección casa hoy en día***/
 
 .casa-hoy{
     padding: 70px 0;
@@ -818,7 +808,7 @@ footer #contacto a{
 }
 
 .lavanderia .owl-item {
-    background-color: rgba(174, 203, 94, 0.33);
+    background-color: rgba(160, 184, 93, 0.254);
 }
 @media screen and (max-width:1200px){
     .carousel-estancias{
@@ -858,7 +848,7 @@ footer #contacto a{
     object-position: 50% bottom;
 }
 
-/*franxa tarifas alojamiento*/
+/*sección tarifas alojamiento*/
 
 .contido-tarifas{
     width: 500px;
@@ -874,7 +864,7 @@ footer #contacto a{
     font-weight: 500;
 }
 
-/*******CURSOS***********************************************************************/
+/***********************CURSOS**************************/
 
 .texto-cursos{
     margin: 0px 0 55px 0;
@@ -894,9 +884,9 @@ footer #contacto a{
 }
 .texto-cursos #obxetivos li::before {
     content: "\2022"; 
-    color: rgb(86, 75, 64);
+    color: var(--verdeClaro);
     font-weight: bold; 
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     display: inline-block;
     width: 1.2em; 
 }
@@ -937,14 +927,14 @@ details[open] summary::before {
 }
 .cabecera-programa, .cabecera-fechas{
     display: block;
-    background-color:rgba(227, 250, 142, 0.687) ;
+    background-color:var(--verdeClaro) ;
     padding: 7px 0 3px 30px;
 }
 #programa #contenedor-programa,
 #fechas #contenedor-fechas{
     display: flex;
     align-items: center;
-    border: solid 4px rgba(227, 250, 142, 0.687);
+    border: solid 4px var(--verdeClaro);
     border-radius: 3px;
     height: 80%;
 }
@@ -958,7 +948,7 @@ details[open] summary::before {
     text-align: left;
 }
 .texto-cursos #fechas ul{
-    list-style: square;
+    list-style: disc;
 }
 .cursos details #fechas ul li{
     margin-bottom: 5px;
@@ -966,7 +956,7 @@ details[open] summary::before {
 }
 .cursos details div li::marker{
     font-weight: 600;
-    color:rgb(86, 75, 64);
+    color:var(--grisCalido);
     margin-right: 1.2rem;
 }
 .cursos details #fechas ul li.completo{
@@ -1021,7 +1011,7 @@ details[open] summary::before {
     margin-top: 0 !important;
 }
 
-/********ENTORNO**************************************************************************/
+/***********************ENTORNO*************************************/
 
 .titulo-entorno{
     text-align: center;
@@ -1055,7 +1045,7 @@ details[open] summary::before {
 }
 .actividade a{
     display: block;
-    color: rgb(86, 75, 64);
+    color: var(--marron);
     text-decoration: underline dotted;
 }
 .carousel-entorno{
@@ -1121,12 +1111,8 @@ details[open] summary::before {
 #mapa{
     height: 100%;
     width: 30vw;
-    background-color: rgb(28, 29, 22);
 }
-@media screen and (max-width:1300px){
-    .como-llegar .seccion-der{
-        padding: 40px;
-    }
+@media screen and (max-width:1400px){
     .como-llegar #camiño img{
         display: none;
     }
@@ -1140,21 +1126,19 @@ details[open] summary::before {
     }
 }
 @media screen and (max-width:900px){
-    .seccion-der{
-        flex-direction: column;
-    }
     .como-llegar #franxa img{
         display: none
     }
     #mapa{
         width: 100vw;
+        height: 400px;
     }
     .como-llegar .seccion-der{
         padding: 0;
     }
 }
 
-/*******SOBRE MI**************************************************************************/
+/****************************SOBRE MI*******************************/
 
 .contenedor-sobre-mi{
     width: 65vw;
@@ -1199,7 +1183,7 @@ details[open] summary::before {
     
 }
 
-/************RESERVAS**************************************************************************/
+/*************************RESERVAS******************************/
 
 .reservas-contido{
     min-height: 75vh;
